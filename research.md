@@ -15,11 +15,14 @@ nav-menu: true
 		<header class="major">
 			<h2>Publications</h2>
 		</header>
+		<div class="6u 12u$(small)">
+			<ul class="alt">
 			{% for pub in site.data.publications %}
-		<div class="publication-entry">
-			{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.
+			<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.</li>
+			{% endfor %}
+			</ul>
 		</div>
-		{% endfor %}
+		
 	</div>
 </section>
 
