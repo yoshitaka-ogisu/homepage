@@ -86,3 +86,15 @@
 	line-height: 1.2;
 	margin-bottom: 0.5em;
 }
+
+.post-content {
+    display: flow-root; // clearfixのような効果
+}
+
+.post-image-right {
+    float: right;
+    max-width: 40%; // 画像の幅を調整
+    margin-left: 20px; // テキストとの間隔
+    margin-bottom: 15px;
+    height: auto;
+}
