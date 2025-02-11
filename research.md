@@ -16,10 +16,8 @@ nav-menu: true
 			<h2>Publications</h2>
 		</header>
 			{% for pub in site.data.publications %}
-		<div>
-			<h4>
+		<div class="publication-entry">
 			{{ pub.authors | join: ', ' }} ({{ pub.year }}), ``{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.
-			</h4>
 		</div>
 		{% endfor %}
 	</div>
@@ -33,7 +31,7 @@ nav-menu: true
 			{% for pub in site.data.preprints %}
 		<div>
 			<h5>
-			{{ pub.authors | join: ', ' }} ({{ pub.year }}), ``{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.journal }}</a>.
+			{{ pub.authors | join: ', ' }} ({{ pub.year }}), ``{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.
 			</h5>
 		</div>
 		{% endfor %}
