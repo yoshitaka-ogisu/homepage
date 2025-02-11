@@ -1,6 +1,6 @@
-# Yoshitaka Ogisu's Academic Website
+# Yoshitaka Ogisu's Website
 
-This is my academic website, hosted on GitHub Pages. The site can be viewed at [yoshitaka-ogisu.github.io](https://yoshitaka-ogisu.github.io).
+This is website, hosted on GitHub Pages. The site can be viewed at [yoshitaka-ogisu.github.io](https://yoshitaka-ogisu.github.io).
 
 ## Credits
 This website is based on the [Forty Jekyll Theme](https://github.com/andrewbanchich/forty-jekyll-theme) by Andrew Banchich.
