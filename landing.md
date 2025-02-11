@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: Research
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+description: Publications and Projects
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
