@@ -1,7 +1,8 @@
-# Yoshitaka Ogisu
-
 ## About Me
 Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
+
+- [Google Scholar](https://scholar.google.co.jp/citations?user=olbpst8AAAAJ)
+- [Researchmap](https://researchmap.jp/yoshitaka_ogisu)
 
 ### Research Interest
 - Macroeconomics
