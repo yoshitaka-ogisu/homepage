@@ -30,7 +30,7 @@ nav-menu: true
 		</header>
 		<ul class="alt">
 			{% for pub in site.data.preprints %}
-			<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.<li>
+			<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.</li>
 			{% endfor %}
 		</ul>
 	</div>
