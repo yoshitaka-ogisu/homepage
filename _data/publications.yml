@@ -1,0 +1,14 @@
+- title: "研究論文のタイトル1"
+  authors: 
+    - "著者1"
+    - "著者2"
+  journal: "雑誌名"
+  year: 2024
+  link: "https://example.com/paper1"
+
+- title: "研究論文のタイトル2"
+  authors: 
+    - "著者3"
+  journal: "別の雑誌"
+  year: 2023
+  link: "https://example.com/paper2"

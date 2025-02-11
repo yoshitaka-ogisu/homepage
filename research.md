@@ -13,9 +13,18 @@ nav-menu: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h2>Sed amet aliquam</h2>
+			<h2>Publications</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+			{% for pub in site.data.publications %}
+		<div>
+			<h3>{{ pub.title }}</h3>
+			<p>著者: {{ pub.authors | join: ', ' }}</p>
+			<p>掲載誌: {{ pub.journal }}, {{ pub.year }}</p>
+			{% if pub.link %}
+			<a href="{{ pub.link }}">詳細リンク</a>
+			{% endif %}
+		</div>
+		{% endfor %}
 	</div>
 </section>
 
