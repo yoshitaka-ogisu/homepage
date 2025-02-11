@@ -37,25 +37,23 @@ nav-menu: true
 </section>
 
 <!-- Three -->
-<section class="spotlights">
-	<section id="three" class="inner">
-		<section>
-			<a href="profile.html" class="image">
-				<img src="/assets/images/pic08.jpg" alt="" data-position="center center" />
-			</a>
-			<div class="content">
-				<div class="inner">
-					<header class="major">
-						<h3>Work in progress</h3>
-					</header>
-					{% for pub in site.data.working %}
-					<div class="publication-entry">
-						{{ pub.title }} (related with {{ pub.field | join: ', ' }}).
-					</div>
-					{% endfor %}
+<section id="three"　class="spotlights">
+	<section>
+		<a href="profile.html" class="image">
+			<img src="/assets/images/pic08.jpg" alt="" data-position="center center" />
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Work in progress</h3>
+				</header>
+				{% for pub in site.data.working %}
+				<div class="publication-entry">
+					{{ pub.title }} (related with {{ pub.field | join: ', ' }}).
 				</div>
+				{% endfor %}
 			</div>
-		</section>
+		</div>
 	</section>
 </section>
 
