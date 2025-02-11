@@ -26,9 +26,9 @@ nav-menu: true
 <section id="two">
 	<div class="inner">
 		<header class="major">
-			<h2>Publications</h2>
+			<h2>Preprint</h2>
 		</header>
-		<ul>
+		<ul class="alt">
 			{% for pub in site.data.preprints %}
 			<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.<li>
 			{% endfor %}
@@ -48,9 +48,9 @@ nav-menu: true
 					<h3>Work in progress</h3>
 				</header>
 				{% for pub in site.data.working %}
-				<div class="publication-entry">
-					{{ pub.title }} (related with {{ pub.field | join: ', ' }}).
-				</div>
+				<ul class="alt">
+					<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
+				<ul>
 				{% endfor %}
 			</div>
 		</div>
