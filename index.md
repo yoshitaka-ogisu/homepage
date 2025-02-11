@@ -1,3 +1,13 @@
+---
+layout: home
+title: Home
+landing-title: 'Hi, my name is Forty'
+description: null
+image: null
+author: null
+show_tile: false
+---
+
 ## About Me
 Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
 
