@@ -17,7 +17,7 @@ nav-menu: true
 		</header>
 			{% for pub in site.data.publications %}
 		<div class="publication-entry">
-			{{ pub.authors | join: ', ' }} ({{ pub.year }}), ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.
+			{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.
 		</div>
 		{% endfor %}
 	</div>
@@ -30,7 +30,7 @@ nav-menu: true
 		</header>
 			{% for pub in site.data.preprints %}
 		<div class="publication-entry">
-			{{ pub.authors | join: ', ' }} ({{ pub.year }}), ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.
+			{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.
 		</div>
 		{% endfor %}
 	</div>
@@ -40,7 +40,7 @@ nav-menu: true
 <section id="three" class="inner">
 	<section>
 		<a href="profile.html" class="image">
-			<img src="{% link assets/images/pic8.jpg %}" alt="" data-position="center center" />
+			<img src="{% assets/images/pic8.jpg %}" alt="" data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
