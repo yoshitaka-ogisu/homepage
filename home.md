@@ -1,14 +1,14 @@
-# Welcome to My Homepage
+# Yoshitaka Ogisu
 
 ## About Me
-こんにちは！私のホームページへようこそ。
+Lecturer, Konan University, Kobe, Japan
 
 ### 興味のある分野
-- プログラミング
-- ウェブデザイン
-- 新しい技術
+- Macroeconomics
+- Network Science
+- Labor
 
-## Projects
+## Reserch
 ### Project 1
 プロジェクトの説明をここに書きます。
 
