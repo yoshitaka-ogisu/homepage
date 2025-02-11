@@ -47,12 +47,13 @@ nav-menu: true
 				<header class="major">
 					<h3>Work in progress</h3>
 				</header>
-				<dev class=inner>
-				<ul class="alt">
-					{% for pub in site.data.working %}
-						<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
-					{% endfor %}
-				<ul>
+				<div>
+					<ul class="alt">
+						{% for pub in site.data.working %}
+							<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
+						{% endfor %}
+					<ul>
+				</div>
 			</div>
 		</div>
 	</section>
