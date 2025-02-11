@@ -17,11 +17,8 @@ nav-menu: true
 		</header>
 			{% for pub in site.data.publications %}
 		<div>
-			<h3>{{ pub.title }}</h3>
-			<p>著者: {{ pub.authors | join: ', ' }}</p>
-			<p>掲載誌: {{ pub.journal }}, {{ pub.year }}</p>
-			{% if pub.link %}
-			<a href="{{ pub.link }}">詳細リンク</a>
+			<h3></h3>
+			<p>{{ pub.authors | join: ', ' }} ({{ pub.year }}), ``{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{volume}}.</p>
 			{% endif %}
 		</div>
 		{% endfor %}

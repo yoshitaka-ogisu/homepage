@@ -1,14 +1,19 @@
-- title: "研究論文のタイトル1"
+- title: "Unstable diffusion in social networks"
   authors: 
-    - "著者1"
-    - "著者2"
-  journal: "雑誌名"
-  year: 2024
-  link: "https://example.com/paper1"
-
-- title: "研究論文のタイトル2"
-  authors: 
-    - "著者3"
-  journal: "別の雑誌"
+    - "Kobayashi, T."
+    - "Y. Ogisu"
+    - "T. Onaga"
+  journal: "Journal of Economic Dynamics and Control"
   year: 2023
-  link: "https://example.com/paper2"
+  volume: 146
+  link: "https://www.sciencedirect.com/science/article/pii/S0165188922002640"
+
+- title: "COVID-19 Infection Spread and Human Mobility"
+  authors: 
+    - "Shibamoto, M."
+    - "S. Hayaki"
+    - "Y. Ogisu"
+  journal: "Journal of the Japanese and International Economies"
+  year: 2022
+  volume: 64
+  link: "https://www.sciencedirect.com/science/article/pii/S0889158322000053"
