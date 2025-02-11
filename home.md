@@ -1,21 +1,23 @@
 # Yoshitaka Ogisu
 
 ## About Me
-Lecturer, Konan University, Kobe, Japan
+Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
 
 ### Research Interest
 - Macroeconomics
 - Network Science
 - Labor
 
-## Reserch
-### Published Paper
+## Research
+### Published Papers
+*Coming soon*
 
-
-### Working Paper
-
-
+### Working Papers
+*Coming soon*
 
 ## Contact
-- Email: ogisu@konan-u.ac.jp / yoshitaka.ogisu@gmail.com
+- Email: 
+  - ogisu@konan-u.ac.jp
+  - yoshitaka.ogisu@gmail.com
+
 ---
