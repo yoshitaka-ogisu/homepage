@@ -36,8 +36,8 @@ nav-menu: true
 	</div>
 </section>
 
-<!-- Two -->
-<section id="two" class="inner">
+<!-- Three -->
+<section id="three" class="inner">
 	<section>
 		<a href="profile.html" class="image">
 			<img src="{% link assets/images/pic8.jpg %}" alt="" data-position="center center" />
@@ -49,7 +49,7 @@ nav-menu: true
 				</header>
 				{% for pub in site.data.working %}
 				<div class="publication-entry">
-					{{ pub.title }}, (related with {{ pub.field | join: ', ' }}).
+					{{ pub.title }} (related with {{ pub.field | join: ', ' }}).
 				</div>
 				{% endfor %}
 			</div>
