@@ -44,7 +44,7 @@ nav-menu: true
 	<section id="three" class="inner">
 		<section>
 			<a href="profile.html" class="image">
-				<img src="{% assets/images/pic08.jpg %}" alt="" data-position="center center" />
+				<img src="/assets/images/pic08.jpg" alt="" data-position="center center" />
 			</a>
 			<div class="content">
 				<div class="inner">
