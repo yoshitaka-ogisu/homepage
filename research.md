@@ -63,7 +63,7 @@ nav-menu: true
 <section id="four" class="spotlights">
 	<section>
 		<header class="major">
-			<h2>Publications<h2>
+			<h2>Publications</h2>
 		</header>
 		<div class="content">
 			<div class="inner">
