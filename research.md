@@ -47,6 +47,7 @@ nav-menu: true
 				<header class="major">
 					<h3>Work in progress</h3>
 				</header>
+				<dev class=inner>
 				<ul class="alt">
 					{% for pub in site.data.working %}
 						<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
@@ -60,17 +61,15 @@ nav-menu: true
 
 <section id="four" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" />
-		</a>
+		<header class="major">
+			<h2>Publications<h2>
+		</header>
 		<div class="content">
 			<div class="inner">
-				<header class="major">
-					<h3>Orci maecenas</h3>
-				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
+				<ul class="alt">
+					{% for pub in site.data.publications %}
+						<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
