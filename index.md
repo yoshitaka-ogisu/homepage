@@ -9,11 +9,7 @@ Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
 - Labor
 
 ## Research
-### Published Papers
-*Coming soon*
-
-### Working Papers
-*Coming soon*
+[Publications](./papers.html)
 
 ## Contact
 - Email: 
