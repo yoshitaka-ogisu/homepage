@@ -52,7 +52,7 @@ nav-menu: true
 						{% for pub in site.data.working %}
 							<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
 						{% endfor %}
-					<ul>
+					</ul>
 				</div>
 			</div>
 		</div>
