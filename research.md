@@ -19,7 +19,6 @@ nav-menu: true
 		<div>
 			<h3></h3>
 			<p>{{ pub.authors | join: ', ' }} ({{ pub.year }}), ``{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{volume}}.</p>
-			{% endif %}
 		</div>
 		{% endfor %}
 	</div>
