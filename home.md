@@ -16,7 +16,5 @@
 別のプロジェクトの説明をここに書きます。
 
 ## Contact
-- GitHub: [あなたのGitHubユーザー名](https://github.com/yourusername)
-- Email: your.email@example.com
-
+- Email: ogisu@konan-u.ac.jp / yoshitaka.ogisu@gmail.com
 ---
