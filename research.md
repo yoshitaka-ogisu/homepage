@@ -62,7 +62,7 @@ nav-menu: true
 </section>
 
 <section>
-	<div class="inner">
+	<div class="inner" align="center">
 		<ul class="actions">
 			<li><a href="index.html" class="button">Home</a></li>
 			<li><a href="#main" class="button special">Page top</a></li>
