@@ -9,8 +9,11 @@ nav-menu: true
 <!-- Main -->
 <div id="main">
 
+<section id="one">
+	<br>
+</section>
 
-<section id="four" class="spotlights">
+<section id="two" class="spotlights">
 	<section>
 		<div class="image">
             <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Publications" style="opacity: 0.8;" data-position="center center" />
@@ -59,10 +62,12 @@ nav-menu: true
 </section>
 
 <section>
-<ul class="actions">
-	<li><a href="index.html" class="button">Home</a></li>
-	<li><a href="#main" class="button special">Page top</a></li>
-</ul>
+	<div class="inner">
+		<ul class="actions">
+			<li><a href="index.html" class="button">Home</a></li>
+			<li><a href="#main" class="button special">Page top</a></li>
+		</ul>
+	</div>
 </section>
 
 </div>
