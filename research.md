@@ -50,8 +50,9 @@ nav-menu: true
 <section id="four" class="spotlights">
 	<section>
 		<div class="image">
-            <!-- 画像がない場合でも枠を維持するためのスペース確保 -->
-            <div style="height: 100%; background-color: #f6f6f6;"></div>
+            <div style="height: 100%; background-color: #f6f6f6; display: flex; justify-content: center; align-items: center;">
+                <h1 style="color: #242943; font-size: 2em;">Publications</h1>
+            </div>
         </div>
 		<div class="content">
 		<header class="major">
