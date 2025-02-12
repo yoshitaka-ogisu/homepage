@@ -50,8 +50,8 @@ nav-menu: true
 <section id="four" class="spotlights">
 	<section>
 		<div class="image">
-            <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Network Visualization" style="opacity: 0.2;"/>
-            <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #242943; font-size: 2em; text-transform: uppercase; margin: 0;">Publications</h1>
+            <img src="{{ 'assets/images/network_communities_light.svg' | relative_url }}" alt="Network Visualization" style="opacity: 0.2;"/>
+            <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #2f3547; font-size: 2em; text-transform: uppercase; margin: 0;">Publications</h1>
         </div>
 		<div class="content">
 			<div class="inner">
