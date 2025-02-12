@@ -9,19 +9,6 @@ nav-menu: true
 <!-- Main -->
 <div id="main">
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h2>Publications</h2>
-		</header>
-		<ul class="alt">
-			{% for pub in site.data.publications %}
-			<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.</li>
-			{% endfor %}
-		</ul>
-	</div>
-</section>
 
 <section id="two">
 	<div class="inner">
@@ -62,10 +49,14 @@ nav-menu: true
 
 <section id="four" class="spotlights">
 	<section>
+		<div class="image">
+            <!-- 画像がない場合でも枠を維持するためのスペース確保 -->
+            <div style="height: 100%; background-color: #f6f6f6;"></div>
+        </div>
+		<div class="content">
 		<header class="major">
 			<h2>Publications</h2>
 		</header>
-		<div class="content">
 			<div class="inner">
 				<ul class="alt">
 					{% for pub in site.data.publications %}
