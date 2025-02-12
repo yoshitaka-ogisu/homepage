@@ -2,7 +2,7 @@
 title: Research
 layout: landing
 description: Publications and Projects
-image: assets/images/pic07.jpg
+image: assets/images/konan_garden.jpg
 nav-menu: true
 ---
 
