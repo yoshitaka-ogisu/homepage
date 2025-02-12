@@ -13,7 +13,7 @@ nav-menu: true
 <section id="four" class="spotlights">
 	<section>
 		<div class="image">
-            <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Publications" style="opacity: 0.1;" data-position="center center" />
+            <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Publications" style="opacity: 0.8;" data-position="center center" />
             <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#ffffff; font-size: 2em; text-transform: uppercase; margin: 0;">Publications</h1>
         </div>
 		<div class="content">
@@ -28,7 +28,7 @@ nav-menu: true
 	</section>
 	<section>
 		<div class="image">
-            <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Preprints" style="opacity: 0.1;" data-position="top center" />
+            <img src="{{ 'assets/images/network_preprints.svg' | relative_url }}" alt="Preprints" style="opacity: 0.8;" data-position="top center" />
             <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#ffffff; font-size: 2em; text-transform: uppercase; margin: 0;">Preprints</h1>
         </div>
 		<div class="content">
@@ -43,7 +43,7 @@ nav-menu: true
 	</section>
 	<section>
 		<div class="image">
-            <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Work in progress" style="opacity: 0.1;" data-position="50% 50%" />
+            <img src="{{ 'assets/images/network_wip.svg' | relative_url }}" alt="Work in progress" style="opacity: 0.8;" data-position="center center" />
             <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#ffffff; font-size: 2em; text-transform: uppercase; margin: 0;">Work in progress</h1>
         </div>
 		<div class="content">
@@ -56,6 +56,13 @@ nav-menu: true
 			</div>
 		</div>
 	</section>
+</section>
+
+<section>
+<ul class="actions">
+	<li><a href="index.html" class="button">Home</a></li>
+	<li><a href="#main" class="button special">Page top</a></li>
+</ul>
 </section>
 
 </div>
