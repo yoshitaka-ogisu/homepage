@@ -2,7 +2,7 @@
 title: Research
 layout: landing
 description: Publications and Projects
-image: assets/images/network_communities_seven.jpg
+image: assets/images/network_communities_seven.svg
 nav-menu: true
 ---
 
