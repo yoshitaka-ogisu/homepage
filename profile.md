@@ -28,8 +28,38 @@ nav-menu: true
           <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
           <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</a></li>
         </ul>
+        <div>
+          <header>
+            <h3>Fields of Interest</h3>
+          </header>
+          <p>Macroeconomics, Labor Economics, Network Science</p>
+          <header>
+            <h3>Education</h3>
+          </header>
+          <div>
+            <ul class="alt">
+              <li>Ph.D. in Economics (Kobe University, Japan)</li>
+              <li>M.A. in Economics (Kobe University, Japan)</li>
+              <li>B.A. in Economics (Nanzan University, Japan)</li>
+            </ul>
+          </div>
+          <header>
+            <h3>Affiliated Academic Society</h3>
+          </header>
+          <div>
+            <ul class="alt">
+              <li>Econometric Society</li>
+              <li>Western Economic Association International</li>
+              <li>Japanese Economic Association</li>
+              <li>Japan Association for Applied Economics</li>
+            </ul>
+          </div>
+        </div>
 			</div>
 		</div>
+	</section>
+  <section >
+		<br>
 	</section>
 </section>
 
