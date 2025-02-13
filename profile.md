@@ -4,7 +4,6 @@ title: Profile
 description: 
 image: assets/images/profile_photo.jpg
 nav-menu: true
-banner-class: style1
 ---
 
 <!-- Main -->
