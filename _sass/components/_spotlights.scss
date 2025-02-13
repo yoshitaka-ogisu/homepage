@@ -223,13 +223,24 @@
 				> .content {
 					@include padding(4em, 3em);
 					width: 100%;
-					grid-row: 1;
 				}
 			}
 		}
 
 		@include breakpoint(small) {
 			> section {
+				display: flex;
+				flex-direction: column;
+
+				> .image {
+					width: 100%;
+					height: auto;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				
 				> .content {
 					@include padding(3em, 1.5em);
 				}
