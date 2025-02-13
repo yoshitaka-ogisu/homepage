@@ -31,8 +31,9 @@
 
 			li {
 				border-top: solid 1px _palette(border);
-				padding: 0.5em 0;
-
+				padding: 0.5em 0 0.5em 2em;  // 右のパディングを維持しつつ左に2emのパディング
+				text-indent: -2em;
+				
 				&:first-child {
 					border-top: 0;
 					padding-top: 0;
