@@ -19,11 +19,11 @@ nav-menu: true
 			<div class="inner">
 				<h2 class="major">
         Yoshitaka Ogisu
-        <h2>
+        </h2>
         <p>Lecturer at <a herf="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
         <ul>
-        <li> <a herf="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar<li>
-        <li> <a herf="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar<li>
+        <li> <a herf="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</li>
+        <li> <a herf="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</li>
         </ul>
 			</div>
 		</div>
