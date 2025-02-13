@@ -24,8 +24,8 @@ nav-menu: true
         </header>
         <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
         <ul>
-        <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</li>
-        <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</li>
+          <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
+          <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</a></li>
         </ul>
 			</div>
 		</div>
