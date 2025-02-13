@@ -15,9 +15,6 @@ nav-menu: true
       <br>
     </section>
       <section class="scroll-fade">
-        <div class="image">
-          <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="center center" />
-        </div>
         <div class="content">
           <div class="inner">
             <header class="major">
@@ -55,6 +52,9 @@ nav-menu: true
               </ul>
             </div>
           </div>
+        </div>
+        <div class="image">
+          <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="center center" />
         </div>
       </div>
     </section>
