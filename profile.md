@@ -17,9 +17,11 @@ nav-menu: true
     </div>
 		<div class="content">
 			<div class="inner">
-				<h2 class="major">
-        Yoshitaka Ogisu
-        </h2>
+				<header class="major">
+          <h2>
+          Yoshitaka Ogisu
+          </h2>
+        </header>
         <p>Lecturer at <a herf="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
         <ul>
         <li> <a herf="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</li>
@@ -32,10 +34,6 @@ nav-menu: true
 
 
 ### Research Interest
-
-
-## Research
-[Publications](./papers.html)
 
 ## Contact
 - Email: 
