@@ -1,19 +1,21 @@
 <!-- Contact -->
 <section id="contact">
 	<div class="inner">
-		<section>
+		<section class="split">
 			<section>
 				<div class="contact-method">
 					<span class="icon alt fa-envelope"></span>
 					<h3>Email</h3>
+					{% for email in site.email %}
 					<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+					{% endfor %}
 				</div>
 			</section>
 		</section>
 		<section class="split">
 			<section>
 				<div class="contact-method">
-					<span class="icon alt fa-home"></span>
+					<span class="icon alt fa-building"></span>
 					<h3>Address</h3>
 					<span>
 					{% if site.street_address %}
