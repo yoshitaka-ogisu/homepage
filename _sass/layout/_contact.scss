@@ -16,14 +16,14 @@
 
 			> :nth-child(2n - 1) {
 				@include padding(4em, 0, (0, 3em, 0, 0));
-				border-right: solid 1px _palette(border);
-				width: 40%;
+				///border-right: solid 1px _palette(border);
+				width: 50%;
 				z-index: 1;
 			}
 
 			> :nth-child(2n) {
 				@include padding(4em, 0, (0, 3em, 0, 0));
-				width: 60%;
+				width: 50%;
 			}
 
 			> .split {
