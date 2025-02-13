@@ -226,6 +226,14 @@
 
 		@include breakpoint(small) {
 			> section {
+				display: flex;
+				flex-direction: column;
+
+				> .image {
+					width: 100%;
+					order: 2;
+				}
+
 				> .content {
 					@include padding(3em, 1.5em);
 				}
