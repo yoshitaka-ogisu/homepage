@@ -91,15 +91,3 @@
         transform: translateY(0);
     }
 }
-
-.wrapper {
-    padding-left: 12em;
-    padding-right: 12em;
-}
-
-@include breakpoint(small) {
-    .wrapper {
-        padding-left: initial;
-        padding-right: initial;
-    }
-}
