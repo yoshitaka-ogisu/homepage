@@ -53,10 +53,10 @@ nav-menu: true
             </div>
           </div>
         </div>
-        <div class="image">
+      </div>
+      <div class="image">
           <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="center center" />
         </div>
-      </div>
     </section>
   <section >
 		<br>
