@@ -26,7 +26,7 @@ nav-menu: true
         <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
         <ul>
           <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
-          <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</a></li>
+          <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap</a></li>
         </ul>
         <div>
           <header>
@@ -37,7 +37,7 @@ nav-menu: true
             <h3>Education</h3>
           </header>
           <div>
-            <ul class="alt">
+            <ul>
               <li>Ph.D. in Economics (Kobe University, Japan)</li>
               <li>M.A. in Economics (Kobe University, Japan)</li>
               <li>B.A. in Economics (Nanzan University, Japan)</li>
@@ -47,7 +47,7 @@ nav-menu: true
             <h3>Affiliated Academic Society</h3>
           </header>
           <div>
-            <ul class="alt">
+            <ul>
               <li>Econometric Society</li>
               <li>Western Economic Association International</li>
               <li>Japanese Economic Association</li>
