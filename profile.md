@@ -18,15 +18,16 @@ nav-menu: true
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-          <h2>
-          Yoshitaka Ogisu
-          </h2>
+          <h2>Yoshitaka Ogisu</h2>
         </header>
+        <p>Lecturer at Konan University, Kobe, Japan</p>
+        <!--
         <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
         <ul>
           <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
           <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar</a></li>
         </ul>
+        -->
 			</div>
 		</div>
 	</section>
