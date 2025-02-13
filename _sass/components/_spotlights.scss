@@ -209,31 +209,23 @@
 		@include breakpoint(medium) {
 			> section {
 				display: flex;
-				flex-direction: column;
+				grid-template-rows: auto auto;
 
 				> .image {
 					width: 100%;
-					order: 2;
+					grid-row: 2;
 				}
 
 				> .content {
 					@include padding(4em, 3em);
 					width: 100%;
-					order: 1;
+					grid-row: 1;
 				}
 			}
 		}
 
 		@include breakpoint(small) {
 			> section {
-				display: flex;
-				flex-direction: column;
-
-				> .image {
-					width: 100%;
-					order: 2;
-				}
-
 				> .content {
 					@include padding(3em, 1.5em);
 				}
