@@ -14,12 +14,12 @@ nav-menu: true
     <section >
       <br>
     </section>
-      <section class="scroll-fade">
-        <div class="content">
-          <div class="inner">
-            <header class="major">
-              <h2>Yoshitaka Ogisu</h2>
-            </header>
+    <section class="scroll-fade">
+      <div class="content">
+        <div class="inner">
+          <header class="major">
+            <h2>Yoshitaka Ogisu</h2>
+          </header>
           <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
           <ul>
             <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
@@ -55,13 +55,13 @@ nav-menu: true
         </div>
       </div>
       <div class="image">
-          <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="center center" />
-        </div>
+        <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="center center" />
+      </div>
     </section>
-  <section >
-		<br>
-	</section>
-</section>
+    <section>
+      <br>
+    </section>
+  </section>
 </section>
 
 </div>
