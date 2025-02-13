@@ -17,24 +17,22 @@ nav-menu: true
     </div>
 		<div class="content">
 			<div class="inner">
-				<ul class="alt">
-					
-				</ul>
+				<h2 class="major">
+        Yoshitaka Ogisu
+        <h2>
+        <p>Lecturer at <a herf="https://www.konan-u.ac.jp/">Konan University</a>, Kobe, Japan</p>
+        <ul>
+        <li> <a herf="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar<li>
+        <li> <a herf="https://researchmap.jp/yoshitaka_ogisu">Researchmap Scholar<li>
+        </ul>
 			</div>
 		</div>
 	</section>
 </section>
 
-## About Me
-Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
-
-- [Google Scholar](https://scholar.google.co.jp/citations?user=olbpst8AAAAJ)
-- [Researchmap](https://researchmap.jp/yoshitaka_ogisu)
 
 ### Research Interest
-- Macroeconomics
-- Network Science
-- Labor
+
 
 ## Research
 [Publications](./papers.html)
