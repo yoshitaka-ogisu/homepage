@@ -93,6 +93,8 @@
 }
 
 .wrapper {
-    padding-left: 10em;
-    padding-right: 10em;
+    @include breakpoint(large) {  // デスクトップサイズで余白を追加
+        padding-left: 5em;
+        padding-right: 5em;
+    }
 }
