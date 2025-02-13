@@ -23,7 +23,7 @@ nav-menu: true
         <header class="major">
           <h2>Yoshitaka Ogisu</h2>
         </header>
-        <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a> (tenured)どかな？</p>
+        <p>Lecturer at <a href="https://www.konan-u.ac.jp/">Konan University</a> (tenured)どや？</p>
         <ul>
           <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
           <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap</a></li>

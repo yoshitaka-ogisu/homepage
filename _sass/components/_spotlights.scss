@@ -214,7 +214,14 @@
 				> .image {
 					width: 100%;
 					height: auto;
+					position: relative;  // 追加
+                	min-height: 200px;   // 追加：最小の高さを確保
+
+					&:before{
+						display: none;
+					}
 					img {
+						position: relative;
 						width: 100%;
 						height: auto;
 					}
@@ -235,12 +242,19 @@
 				> .image {
 					width: 100%;
 					height: auto;
+					position: relative;
+					min-height: 200px;
+
+					&before:{
+						display: none;
+					}
+					
 					img {
 						width: 100%;
 						height: auto;
 					}
 				}
-				
+
 				> .content {
 					@include padding(3em, 1.5em);
 				}
