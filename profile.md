@@ -10,7 +10,7 @@ nav-menu: true
 <div id="main">
 
 
-<section id="two" class="spotlights">
+<section id="one" class="spotlights">
 	<section class="scroll-fade">
 		<div class="image">
       <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="top center" />
@@ -31,11 +31,3 @@ nav-menu: true
 		</div>
 	</section>
 </section>
-
-
-### Research Interest
-
-## Contact
-- Email: 
-  - ogisu@konan-u.ac.jp
-  - yoshitaka.ogisu@gmail.com
