@@ -13,7 +13,7 @@ nav-menu: true
 	<br>
 </section>
 
-<section id="two" class="spotlights">
+<section id="two" class="spotlights scroll-fade">
 	<section>
 		<div class="image">
             <img src="{{ 'assets/images/network_communities.svg' | relative_url }}" alt="Publications" style="opacity: 0.7;" data-position="center center" />
@@ -65,7 +65,7 @@ nav-menu: true
 	<div class="inner" align="center">
 		<ul class="actions">
 			<li><a href="index.html" class="button">Home</a></li>
-			<li><a href="#main" class="button special">Page top</a></li>
+			<li><a href="#banner" class="button special scroll">Page top</a></li>
 		</ul>
 	</div>
 </section>
