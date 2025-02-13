@@ -1,5 +1,5 @@
 ---
-layout: landing
+layout: page
 title: Profile
 description: 
 image: assets/images/profile_photo.jpg
