@@ -93,11 +93,6 @@
 }
 
 .wrapper {
-    padding-left: 3em;
-    padding-right: 3em;
-
-    @include breakpoint(small) {
-        padding-left: 1em;
-        padding-right: 1em;
-    }
+    padding-left: 10em;
+    padding-right: 10em;
 }
