@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
+                entry.target.classList.remove('fade-out');
+            } else {
+                entry.target.classList.remove('fade-in');
+                entry.target.classList.add('fade-out');
             }
         });
     }, {
-        threshold: 0.1  // 要素が10%見えた時点でアニメーション開始
+        threshold: 0.2  // 要素が20%見えた時点でアニメーション開始
     });
 
     // フェードインさせたい要素にクラスを追加して監視
