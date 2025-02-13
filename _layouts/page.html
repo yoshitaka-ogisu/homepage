@@ -13,13 +13,9 @@
     <script type="text/javascript">document.body.classList.add("is-loading");</script>
 
 	    <!-- ページヘッダーを追加 -->
+		<!--
 		<section id="banner" class="style1">
 			<div class="inner">
-				<!--
-				<span class="image">
-					{% if page.image %}<img src="{{ page.image | relative_url }}" alt="" />{% endif %}
-				</span>
-				-->
 				<header class="major">
 					<h1>{{ page.title }}</h1>
 				</header>
@@ -30,7 +26,8 @@
 				{% endif %}
 			</div>
 		</section>
-	<!--ここまでヘッダー-->
+		-->
+		<!--ここまでヘッダー-->
 
     {% include header.html %} {{ content }} {% include footer.html %}
 
