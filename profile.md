@@ -6,6 +6,25 @@ image: assets/images/profile_photo.jpg
 nav-menu: true
 ---
 
+<!-- Main -->
+<div id="main">
+
+
+<section id="two" class="spotlights">
+	<section class="scroll-fade">
+		<div class="image">
+      <img src="{{ 'assets/images/profile_photo.jpg' | relative_url }}" alt="" data-position="top center" />
+    </div>
+		<div class="content">
+			<div class="inner">
+				<ul class="alt">
+					
+				</ul>
+			</div>
+		</div>
+	</section>
+</section>
+
 ## About Me
 Lecturer at [Konan University](https://www.konan-u.ac.jp/), Kobe, Japan
 
