@@ -1,5 +1,5 @@
 ---
-layout: post1
+layout: post
 title: Profile
 description: 
 image: assets/images/profile_photo.jpg
