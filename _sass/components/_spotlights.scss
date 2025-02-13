@@ -245,10 +245,10 @@
 					position: relative;
 					min-height: 200px;
 
-					&before:{
+					&:before{
 						display: none;
 					}
-					
+
 					img {
 						width: 100%;
 						height: auto;
