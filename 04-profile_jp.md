@@ -4,6 +4,7 @@ title: プロフィール
 description: 日本語版
 image: assets/images/nakagusuku.jpg
 nav-menu: true
+banner_style: style4
 ---
 
 

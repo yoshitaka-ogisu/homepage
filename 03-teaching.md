@@ -4,6 +4,7 @@ title: Teaching
 description: 日本語ページ
 image: 
 nav-menu: true
+banner_style: style3
 ---
 
 <!-- Main -->
@@ -18,7 +19,7 @@ nav-menu: true
 <h2 id="content" class="major">担当科目（2025）</h2>
 	<section id="page-teaching" class="tiles">
 		<article style="style1">
-			<a href="/course_page/introductory_macroeconomics.html" class="link primary">
+			<a href="/course_page/introductory_macroeconomics.html | relative_url" class="link primary">
 				<header class="major">
 					<h3>入門マクロ経済学</h3>
 					<p>甲南大学/経済学部</p>

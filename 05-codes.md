@@ -2,8 +2,9 @@
 layout: page
 title: Codes
 description: 
-image: 
+image: assets/images/sakura_network.svg
 nav-menu: true
+banner_style: style5
 ---
 
 
