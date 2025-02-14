@@ -7,6 +7,7 @@
   year: 2023
   volume: 146
   link: "https://www.sciencedirect.com/science/article/pii/S0165188922002640"
+  paper: "assets/pdf/papers/Unstable_diffusion.pdf"
 
 - title: "COVID-19 Infection Spread and Human Mobility"
   authors: 
@@ -17,3 +18,4 @@
   year: 2022
   volume: 64
   link: "https://www.sciencedirect.com/science/article/pii/S0889158322000053"
+  paper: "assets/pdf/papers/Covid-19_infection_spread.pdf"

@@ -1,9 +1,20 @@
+- title: "Identification of Relationship Lending in Bank-Borrower Networks"
+  authors: 
+    - "Ogisu, Y."
+    - "S. Hayaki"
+    - "M. Shibamoto"
+  pub_by: "RIEB Discussion Paper Series No.2025-02"
+  year: 2025
+  link: "https://www.rieb.kobe-u.ac.jp/academic/ra/dp/English/dp2025-02.html"
+  paper: "assets/pdf/papers/Identification_of_relationship_lending.pdf"
+
 - title: "Impacts and Distribution of Premiums from Temporal Social Networks across Generations"
   authors: 
     - "Ogisu, Y."
   pub_by: "RIEB Discussion Paper Series DP2023-1"
   year: 2023
   link: "https://www.rieb.kobe-u.ac.jp/academic/ra/dp/English/dp2023-13.html"
+  paper: "assets/pdf/papers/Impacts_and_distributions.pdf"
 
 - title: "Referral Hiring and Social Network Structure"
   authors: 
@@ -11,4 +22,9 @@
   pub_by: "arXiv:2201.06020"
   year: 2022
   link: "https://arxiv.org/abs/2201.06020"
+  paper: "assets/pdf/papers/Referral_hiring_and_social_network_structure.pdf"
+
+
+
+  
 
