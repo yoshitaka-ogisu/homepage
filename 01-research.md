@@ -23,14 +23,16 @@ nav-menu: true
 			<div class="inner">
 				<ul class="alt">
 					{% for pub in site.data.publications %}
-						<div class="row">
-							<div class="10u 12u$(small)">
-								<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.</li> 
+						<li class="publication-item">
+							<div class="publication-content">
+								{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <em><a href="{{ pub.link }}">{{ pub.journal }}</a></em>, {{pub.volume}}.
 							</div>
-							<div class="2u$ 12u$(small)">
-							<a href="{{ pub.paper }}" class="button icon fa-file-pdf-o">Paper</a>
+							<div class="publication-action">
+								<a href="{{ pub.paper }}" class="button">
+									file
+								</a>
 							</div>
-						</div>
+						</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -45,14 +47,14 @@ nav-menu: true
 			<div class="inner">
 				<ul class="alt">
 					{% for pub in site.data.preprints %}
-						<div class="row">
-							<div class="10u 12u$(small)">
-								<li>{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.</li>
+						<li class="publication-item">
+							<div class="pablication-content">
+								{{ pub.authors | join: ', ' }} ({{ pub.year }}) ''{{ pub.title }},'' <a href="{{ pub.link }}">{{ pub.pub_by }}</a>.
 							</div>
-							<div class="2u$ 12u$(small)">
-								<a href="{{ pub.paper }}" class="button icon fa-file-pdf-o">Paper</a>
+							<div class="publication-action">
+								<a href="{{ pub.paper }}" class="button">file</a>
 							</div>
-						</div>
+						</li>
 					{% endfor %}
 				</ul>
 			</div>

@@ -103,3 +103,28 @@
         padding-right: initial;
     }
 }
+
+
+ul.alt li.publication-item {
+    padding: 0.5em 0 0.5em 2em;  /* オリジナルのパディングを復活 */
+    text-indent: -2em;           /* ぶら下げインデントを復活 */
+    display: flex;
+    position: relative;
+    /* padding-right: 6em;          ボタン用の余白 */
+    align-items: center;         /* 縦方向の中央揃え */
+	justify-content: space-between;
+	gap: 2em;
+}
+
+.publication-content {
+    flex: 1;
+    /* text-indentはpublication-contentに対して適用 */
+    text-indent: -2em;
+    padding-left: 2em;
+}
+
+.publication-action {
+    flex-shrink: 0;
+    /* text-indentをリセット */
+    text-indent: 0;
+}

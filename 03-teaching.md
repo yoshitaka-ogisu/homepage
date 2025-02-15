@@ -27,7 +27,7 @@ banner_style: style3
 			</a>
 		</article>
 		<article style="style2">
-			<a href="/course_page/labor_economicsII.html" class="link primary">
+			<a href="{{ site.baseurl }}/course_page/labor_economicsII.html" class="link primary">
 				<header class="major">
 					<h3>労働経済II</h3>
 					<p>甲南大学/経済学部</p>
@@ -35,7 +35,7 @@ banner_style: style3
 			</a>
 		</article>
 		<article style="style3">
-			<a href="/course_page/advanced_macroeconomicsII.html" class="link primary">
+			<a href="{{ site.baseurl }}/course_page/advanced_macroeconomicsII.html" class="link primary">
 				<header class="major">
 					<h3>上級マクロ経済学II</h3>
 					<p>甲南大学/経済学部</p>
@@ -43,7 +43,7 @@ banner_style: style3
 			</a>
 		</article>
 		<article style="style4">
-			<a href="/course_page/japanese_economy.html" class="link primary">
+			<a href="{{ site.baseurl }}/course_page/japanese_economy.html" class="link primary">
 				<header class="major">
 					<h3>日本経済論</h3>
 					<p>神戸大学/経済学部</p>
