@@ -5,6 +5,7 @@ description: 甲南大学/経済学部
 image: 
 nav-menu: false
 show_tile: false
+banner_style: style1
 ---
 
 <!-- Main -->
@@ -37,7 +38,7 @@ show_tile: false
 			<tr>
 				<td>入門マクロ経済学 ハンドアウト</td>
 				<td>2025/2/15</td>
-				<td><a href="{{ '/assets/pdf/teaching/introductory_macro_handout.pdf' | relative_url }}" class="button icon fa-file-pdf-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macro_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -124,20 +125,48 @@ show_tile: false
 				</div>
 			</div>
 			<br>
-			<!-- リアクションペーパーの内容 -->
-			<div class="select-wrapper">
-				<select name="satisfaction" id="satisfaction" required>
-					<option value="">- 講義の理解度（選択必須） -</option>
-					<option value="1">1. 問題なく理解できた。</option>
-					<option value="2">2. 一部を除いて、概ね理解できた。</option>
-					<option value="3">3. 理解できない部分が多いが、一部理解できた。</option>
-					<option value="4">4. 理解できなかった。</option>
-				</select>
+			<h5>講義回と理解度の選択（必須）</h5>
+			<div class="row">
+				<div class="4u 12u$(small)">
+					<!-- 講義回ボタン -->
+					<div class="select-wrapper">
+						<select name="n_of_lecture" id="n_of_lecture" required>
+							<option value="">- 講義実施回 -</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+						</select>
+					</div>
+				</div>
+				<div class="8u$ 12u$(small)">
+					<!-- 理解度ボタン -->
+					<div class="select-wrapper">
+						<select name="satisfaction" id="satisfaction" required>
+							<option value="">- 講義の理解度 -</option>
+							<option value="1">1. 問題なく理解できた。</option>
+							<option value="2">2. 一部を除いて、概ね理解できた。</option>
+							<option value="3">3. 理解できない部分が多いが、一部理解できた。</option>
+							<option value="4">4. 理解できなかった。</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			<br>		
 			<!-- リアクションペーパーの内容 -->
 			<div class="12u$ 12u$">
-				<h4>コメント（任意）</h4>
+				<h5>コメント（任意）</h5>
 				<textarea name="reaction_content" id="reaction_content" 
 						placeholder="コメントや質問があれば入力してください" rows="6"></textarea>
 			</div>

@@ -62,6 +62,7 @@ banner_style: style4
                 <li>Western Economic Association International</li>
                 <li>日本経済学会</li>
                 <li>日本応用経済学会</li>
+                <li>日本金融学会</li>
               </ul>
             </div>
           </div>
