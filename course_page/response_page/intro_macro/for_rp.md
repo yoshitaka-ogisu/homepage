@@ -31,7 +31,7 @@ show_tile: false
   <div class="inner" align="center">
     <ul class="actions">
       <li><a href="index.html" class="button">Home</a></li>
-      <li><a href="{{page.baseurl}}/03-teaching.html" class="button special">Teaching</a></li>
+      <li><a href="{{ site.baseurl }}/03-teaching.html" class="button special">Teaching</a></li>
     </ul>
   </div>
 </section>
