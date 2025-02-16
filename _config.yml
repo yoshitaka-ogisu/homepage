@@ -40,8 +40,9 @@ exclude:
 - CONTRIBUTING.md
 - README.md 
 
-## for analytics
-google_analytics: G-WXXXXXXXXX
 
+# for sitemap
 plugins:
 - jekyll-sitemap
+
+google_analytics: G-1M5G72XDE7
