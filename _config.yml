@@ -39,3 +39,9 @@ exclude:
 - LICENSE.md
 - CONTRIBUTING.md
 - README.md 
+
+## for analytics
+google_analytics: G-WXXXXXXXXX
+
+plugins:
+- jekyll-sitemap
