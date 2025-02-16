@@ -10,7 +10,7 @@ banner_style: style2
 <!-- Main -->
 <div id="main">
 
-<section class="wrapper">
+
   <section id="sec-profile" class="spotlights">
     <section >
       <br>
@@ -36,42 +36,48 @@ banner_style: style2
               <a href="assets/pdf/profile/CV.pdf" class="button icon fa-download">CV</a>
             </div>
           </div>
-          <div>
-            <header>
-              <h3>Fields of Interest</h3>
-            </header>
-            <p>Macroeconomics, Labor Economics, Network Science</p>
-            <header>
-              <h3>Education</h3>
-            </header>
-            <div>
-              <ul class="alt">
-                <li>Ph.D. in Economics (Kobe University, Japan)</li>
-                <li>M.A. in Economics (Kobe University, Japan)</li>
-                <li>B.A. in Economics (Nanzan University, Japan)</li>
-              </ul>
-            </div>
-            <header>
-              <h3>Affiliated Academic Society</h3>
-            </header>
-            <div>
-              <ul>
-                <li>Econometric Society</li>
-                <li>Western Economic Association International</li>
-                <li>Japanese Economic Association</li>
-                <li>Japan Association for Applied Economics</li>
-                <li>Japan Society of Monetary Economics</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </section>
-    <section>
-      <br>
-    </section>
   </section>
+
+<section class="profile-structure">
+  <section class="scroll-fade">
+    <header>
+      <h3>Fields of Interest</h3>
+    </header>
+    <p>Macroeconomics, Labor Economics, Network Science</p>
+  </section>
+  <section class="scroll-fade">
+    <header>
+      <h3>Education</h3>
+    </header>
+    <div>
+      <ul class="alt">
+        <li>Ph.D. in Economics (Kobe University, Japan)</li>
+        <li>M.A. in Economics (Kobe University, Japan)</li>
+        <li>B.A. in Economics (Nanzan University, Japan)</li>
+      </ul>
+    </div>
+  </section>
+  <section class="scroll-fade">
+    <header>
+      <h3>Affiliated Academic Society</h3>
+    </header>
+    <div>
+      <ul>
+        <li>Econometric Society</li>
+        <li>Western Economic Association International</li>
+        <li>Japanese Economic Association</li>
+        <li>Japan Association for Applied Economics</li>
+        <li>Japan Society of Monetary Economics</li>
+      </ul>
+    </div>
+    <br><br>
+  </section>
+
 </section>
+
 
 <section>
   <div class="inner" align="center">

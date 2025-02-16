@@ -128,3 +128,13 @@ ul.alt li.publication-item {
     /* text-indentをリセット */
     text-indent: 0;
 }
+
+.profile-structure {
+	padding: 0 12em;
+	
+	> section{
+		background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+		padding: 1em 3em;
+	}
+		
+}
