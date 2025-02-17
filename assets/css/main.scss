@@ -136,5 +136,36 @@ ul.alt li.publication-item {
 		background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
 		padding: 1em 3em;
 	}
+
+	@include breakpoint(medium) {
+		padding: 0 0;
+
+		> section {
+			display: block;
+			//text-align: center;
+
+			> .image {
+				width: 50%;
+				margin: 0 auto;  // 追加：左右のマージンを自動で均等に
+				display: block;  // 追加：ブロック要素として表示
+				height: 100%
+			}
+
+			> .content {
+				@include padding(4em, 3em);
+				width: 100%;
+			}
+		}
+	}
+
+	@include breakpoint(small) {
+		padding: 0 0;
+		
+		> section {
+			> .content {
+				@include padding(3em, 1.5em);
+			}
+		}
+	}
 		
 }
