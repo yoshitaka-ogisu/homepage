@@ -42,6 +42,14 @@ banner_style: style3
 				</header>
 			</a>
 		</article>
+		<article style="style3">
+			<a href="{{ site.baseurl }}/course_page/introductory_statistics.html" class="link primary">
+				<header class="major">
+					<h3>統計入門</h3>
+					<p>甲南大学/経済学部</p>
+				</header>
+			</a>
+		</article>
 		<article style="style4">
 			<a href="{{ site.baseurl }}/course_page/japanese_economy.html" class="link primary">
 				<header class="major">
@@ -79,6 +87,11 @@ banner_style: style3
 			</tr>
 			<tr>
 				<td>労働経済II</td>
+				<td>甲南大学</td>
+				<td>2024/前期</td>
+			</tr>
+			<tr>
+				<td>統計入門</td>
 				<td>甲南大学</td>
 				<td>2024/前期</td>
 			</tr>
