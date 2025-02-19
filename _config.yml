@@ -40,7 +40,6 @@ exclude:
 - CONTRIBUTING.md
 - README.md 
 
-
 # for sitemap
 plugins:
 - jekyll-sitemap
