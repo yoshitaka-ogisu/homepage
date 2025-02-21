@@ -5,7 +5,7 @@ email:
   - ogisu[at]konan-u.ac.jp
   - yoshitaka.ogisu[at]gmail.com
 description: Lecturer at Konan University, Kobe, Japan
-baseurl: https://yoshitaka-ogisu.github.io/homepage # the subpath of your site, e.g. /blog
+baseurl: # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:
 street_address: 8-9-1 Okamoto, Higashinada

@@ -178,7 +178,7 @@ banner_style: style2
 <section>
   <div class="inner" align="center">
 	<ul class="actions">
-	  <li><a href="{{page.baseurl}}/03-teaching.html" class="button">Go back Teaching</a></li>
+	  <li><a href="{{ site.baseurl }}/03-teaching.html" class="button">Go back Teaching</a></li>
 	</ul>
   </div>
 </section>
