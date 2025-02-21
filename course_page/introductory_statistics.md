@@ -20,6 +20,23 @@ banner_style: style4
 <h2 id="content">現在建設中</h2>
 
 
+<section>
+  <div class="inner" align="center">
+	<ul class="actions">
+	  <li><a href="{{ page.baseurl }}/03-teaching.html" class="button">Go back Teaching</a></li>
+	</ul>
+  </div>
+</section>
+
+<section>
+  <div class="inner" align="center">
+	<ul class="actions">
+	  <li><a href="index.html" class="button">Home</a></li>
+	  <li><a href="#banner" class="button special scroll">Page top</a></li>
+	</ul>
+  </div>
+</section>
+
 
 </div>
 </section>
