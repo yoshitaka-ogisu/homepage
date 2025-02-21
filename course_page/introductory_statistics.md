@@ -20,6 +20,8 @@ banner_style: style4
 <h2 id="content">現在建設中</h2>
 
 
+<hr class="major" />
+
 <section>
   <div class="inner" align="center">
 	<ul class="actions">

@@ -186,7 +186,7 @@ banner_style: style1
 	</div>
 </div>
 
-<hr>
+<hr class="major" />
 
 <section>
   <div class="inner" align="center">
