@@ -38,7 +38,7 @@ banner_style: style1
 			<tr>
 				<td>入門マクロ経済学 ハンドアウト</td>
 				<td>2025/2/15</td>
-				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macro_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macro/introductory_macro_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
