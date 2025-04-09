@@ -37,7 +37,7 @@ banner_style: style2
 		<tbody>
 			<tr>
 				<td>第1回 配布資料</td>
-				<td>2025/2/15</td>
+				<td>2025/4/9</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/01-labor.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 			<tr>
