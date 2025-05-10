@@ -105,6 +105,11 @@ banner_style: style2
 				<td>2025/2/15</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/14-labor.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
+			<tr>
+				<td>中間レポート</td>
+				<td>2025/5/11</td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/midterm_report.pdf" class="button icon fa-file-pdf-o">file</a></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
