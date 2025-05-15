@@ -107,7 +107,7 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>中間レポート[<a href="https://forms.gle/oRaTq7vQENxqpca99">解説希望調査</a>]</td>
-				<td>2025/5/11</td>
+				<td>2025/5/15</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/midterm_report.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
