@@ -110,6 +110,11 @@ banner_style: style2
 				<td>2025/5/15</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/midterm_report.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
+			<tr>
+				<td>問いのまとめ</td>
+				<td>2025/5/23</td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/questions.pdf" class="button icon fa-file-pdf-o">file</a></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
