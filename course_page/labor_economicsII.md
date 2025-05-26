@@ -97,12 +97,12 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>第13回 配布資料</td>
-				<td>2025/2/15</td>
+				<td>2025/5/26</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/13-labor.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第14回 配布資料</td>
-				<td>2025/2/15</td>
+				<td>2025/5/26</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/14-labor.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 			<tr>
