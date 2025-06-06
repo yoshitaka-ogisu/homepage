@@ -77,7 +77,7 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>第9回 配布資料</td>
-				<td>2025/5/23</td>
+				<td>2025/6/6</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/09-labor.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 			<tr>
