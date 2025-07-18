@@ -111,8 +111,8 @@ banner_style: style2
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/midterm_report.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 			<tr>
-				<td>問いのまとめ[<a href="https://forms.gle/GSoUVd6gvjx6Kckz7">解説希望調査</a>]</td>
-				<td>2025/7/9</td>
+				<td>問いのまとめ</td>
+				<td>2025/7/18</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/questions.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
