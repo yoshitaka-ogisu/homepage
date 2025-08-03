@@ -115,6 +115,20 @@ banner_style: style3
 	</table>
 </div>
 
+<header>
+<h3>その他資料</h3>
+</header>
+
+<section>
+  <div class="inner" align="center">
+	<ul class="actions">
+	  <li><a href="{{ site.baseurl }}/course_page/others.html" class="button">Material Page</a></li>
+	</ul>
+  </div>
+</section>
+
+<hr class="major" />
+
 
 <section>
   <div class="inner" align="center">
