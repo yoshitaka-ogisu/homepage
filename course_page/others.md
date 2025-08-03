@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Other Materials
-description: 甲南大学/経済学部
+title: その他資料
+description: Other Materials
 image: 
 nav-menu: false
 show_tile: false
