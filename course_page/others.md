@@ -16,7 +16,7 @@ banner_style: style2
     <div class="inner">
 
 <!-- Content -->
-<h2>その他の資料</h2>
+
 
 <div class="table-wrapper">
     <table>
