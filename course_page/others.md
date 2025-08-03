@@ -1,0 +1,63 @@
+---
+layout: page
+title: Other Materials
+description: 甲南大学/経済学部
+image: 
+nav-menu: false
+show_tile: false
+banner_style: style2
+---
+
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+    <div class="inner">
+
+<!-- Content -->
+<h2>その他の資料</h2>
+
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>コンテンツ</th>
+                <th>アップデート日</th>
+                <th>ダウンロードリンク</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>経済学部への招待状</td>
+                <td>2025/8/3</td>
+                <td><a href="{{ site.baseurl }}/assets/pdf/teaching/others/invitation_to_economics.pdf" class="button icon fa-file-pdf-o">file</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr class="major" />
+
+<section>
+  <div class="inner" align="center">
+    <ul class="actions">
+      <li><a href="{{ site.baseurl }}/03-teaching.html" class="button">Go back Teaching</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="inner" align="center">
+    <ul class="actions">
+      <li><a href="index.html" class="button">Home</a></li>
+      <li><a href="#banner" class="button special scroll">Page top</a></li>
+    </ul>
+  </div>
+</section>
+
+<!--End Contents-->
+    </div>
+</section>
+
+</div>
