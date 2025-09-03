@@ -25,7 +25,7 @@ banner_style: style2
             <h2>Yoshitaka Ogisu</h2>
           </header>
           <p>Lecturer, Faculty of Economics, <a href="https://www.konan-u.ac.jp/">Konan University</a> (tenured)</p>
-          <p>Project Associate Professor, Research Institute for Economics and Business Administration, <a href="https://www.rieb.kobe-u.ac.jp/en/index.html">Kobe University</a> (cross appointment)</p>
+          <p>Project Associate Professor, Research Institute for Economics and Business Administration (RIEB), <a href="https://www.rieb.kobe-u.ac.jp/en/index.html">Kobe University</a> (cross appointment)</p>
           <div class="row">
             <div class="4u 12u$(small)">
               <ul>
