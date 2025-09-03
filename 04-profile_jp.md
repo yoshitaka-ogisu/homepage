@@ -24,8 +24,10 @@ banner_style: style4
         <header class="major">
           <h2>荻巣 嘉高</h2>
         </header>
-        <p><a href="https://www.konan-u.ac.jp/">甲南大学 経済学部</a> 講師 (常勤)</p>
-        <p><a href="https://www.rieb.kobe-u.ac.jp/index.html">神戸大学 経済経営研究所（RIEB）</a> 特命講師 (クロスアポイントメント)</p>
+        <p>
+        <a href="https://www.konan-u.ac.jp/">甲南大学</a> 経済学部 講師 (常勤)
+        神戸大学 <a href="https://www.rieb.kobe-u.ac.jp/index.html">経済経営研究所（RIEB）</a> 特命講師 (クロスアポイントメント)
+        </p>
         <div class="row">
           <div class="4u 12u$(small)">
             <ul>
