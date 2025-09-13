@@ -37,37 +37,37 @@ banner_style: style3
 		</thead>
 		<tbody>
 			<tr>
-				<td>第1回スライド</td>
+				<td>第1回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main1.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第2回スライド</td>
+				<td>第2回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main2.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第3回スライド</td>
+				<td>第3回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main3.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第4回スライド</td>
+				<td>第4回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main4.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第5回スライド</td>
+				<td>第5回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main5.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第6回スライド</td>
+				<td>第6回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main6.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第7回スライド</td>
+				<td>第7回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main7.html" class="button icon fa-file-o">file</a></td>
 			</tr>
@@ -77,37 +77,37 @@ banner_style: style3
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main8.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第9回スライド</td>
+				<td>第9回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main9.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第10回スライド</td>
+				<td>第10回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main10.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第11回スライド</td>
+				<td>第11回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main11.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第12回スライド</td>
+				<td>第12回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main12.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第13回スライド</td>
+				<td>第13回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main13.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第14回スライド</td>
+				<td>第14回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main14.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第15回スライド</td>
+				<td>第15回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main15.html" class="button icon fa-file-o">file</a></td>
 			</tr>
