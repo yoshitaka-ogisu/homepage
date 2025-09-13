@@ -72,7 +72,7 @@ banner_style: style3
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main7.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>第8回スライド</td>
+				<td>第8回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/advanced_macroeconomicsII/main8.html" class="button icon fa-file-o">file</a></td>
 			</tr>
