@@ -117,21 +117,6 @@ banner_style: style3
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main15.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>補足資料</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>微分と積分</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_math.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>統計学の概論</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_statistics.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
 				<td>データ</td>
 				<td></td>
 				<td></td>
@@ -175,6 +160,21 @@ banner_style: style3
 				<td>GDPギャップ <br> <code>gdp_gap.xlsx</code> </td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp_gap.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>補足資料</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>微分と積分</td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_math.html" class="button icon fa-file-o">file</a></td>
+			</tr>
+			<tr>
+				<td>統計学の概論</td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_statistics.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
