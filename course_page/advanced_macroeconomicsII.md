@@ -37,6 +37,11 @@ banner_style: style3
 		</thead>
 		<tbody>
 			<tr>
+				<td>講義資料</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
 				<td>第1回資料</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main1.html" class="button icon fa-file-o">file</a></td>
@@ -112,24 +117,64 @@ banner_style: style3
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main15.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>補足資料：微分と積分</td>
+				<td>補足資料</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>微分と積分</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_math.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
-				<td>補足資料：統計学の概論</td>
+				<td>統計学の概論</td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_statistics.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
+				<td>データ</td>
 				<td></td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main_statistics.html" class="button icon fa-file-o">file</a></td>
+				<td></td>
 			</tr>
 			<tr>
-				<td>pwt_part_data</td>
+				<td>PWT（抜粋） <br> <code>pwt_part_data.xlsx</code> </td>
 				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt_part_data.xlsx" class="button icon fa-file-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt_part_data.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>PWT <br> <code>pwt1001.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt_1001.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>GDP <br> <code>gdp.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>失業率 <br> <code>gdp.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/unemp.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>賃金&労働生産性（excel） <br> <code>wage_and_productivity.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>賃金&労働生産性（csv） <br> <code>wage_and_productivity.csv</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-file-table-o">file</a></td>
+			</tr>
+			<tr>
+				<td>賃金&その他 <br> <code>wage_and_others.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_others.xlsx" class="button icon fa-file-excel-o">file</a></td>
+			</tr>
+			<tr>
+				<td>GDPギャップ <br> <code>gdp_gap.xlsx</code> </td>
+				<td>2025/9/13</td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp_gap.xlsx" class="button icon fa-file-excel-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
