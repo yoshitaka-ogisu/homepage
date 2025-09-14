@@ -26,6 +26,7 @@ banner_style: style3
 
 <hr class="major" />
 
+<h3>講義資料</h3>
 <div class="table-wrapper">
 	<table>
 		<thead>
@@ -36,11 +37,6 @@ banner_style: style3
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>講義資料</td>
-				<td></td>
-				<td></td>
-			</tr>
 			<tr>
 				<td>第1回資料</td>
 				<td>2025/9/13</td>
@@ -116,11 +112,20 @@ banner_style: style3
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main15.html" class="button icon fa-file-o">file</a></td>
 			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3>データ</h3>
+<div class="table-wrapper">
+	<table>
+		<thead>
 			<tr>
-				<td>データ</td>
-				<td></td>
-				<td></td>
+				<th>コンテンツ</th>
+				<th>アップデート日</th>
+				<th>ダウンロードリンク</th>
 			</tr>
+		</thead>
 			<tr>
 				<td>PWT（抜粋） <br> <code>pwt_part_data.xlsx</code> </td>
 				<td>2025/9/13</td>
@@ -149,7 +154,7 @@ banner_style: style3
 			<tr>
 				<td>賃金&労働生産性（csv） <br> <code>wage_and_productivity.csv</code> </td>
 				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-file-table-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-table-o">file</a></td>
 			</tr>
 			<tr>
 				<td>賃金&その他 <br> <code>wage_and_others.xlsx</code> </td>
@@ -161,11 +166,20 @@ banner_style: style3
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp_gap.xlsx" class="button icon fa-file-excel-o">file</a></td>
 			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3>補足資料</h3>
+<div class="table-wrapper">
+	<table>
+		<thead>
 			<tr>
-				<td>補足資料</td>
-				<td></td>
-				<td></td>
+				<th>コンテンツ</th>
+				<th>アップデート日</th>
+				<th>ダウンロードリンク</th>
 			</tr>
+		</thead>
 			<tr>
 				<td>微分と積分</td>
 				<td>2025/9/13</td>
