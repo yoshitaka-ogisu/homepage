@@ -126,6 +126,7 @@ banner_style: style3
 				<th>ダウンロードリンク</th>
 			</tr>
 		</thead>
+		<tbody>
 			<tr>
 				<td>PWT（抜粋） <br> <code>pwt_part_data.xlsx</code> </td>
 				<td>2025/9/13</td>
@@ -180,6 +181,7 @@ banner_style: style3
 				<th>ダウンロードリンク</th>
 			</tr>
 		</thead>
+		<tbody>
 			<tr>
 				<td>微分と積分</td>
 				<td>2025/9/13</td>
