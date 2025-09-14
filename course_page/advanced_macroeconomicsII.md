@@ -143,7 +143,7 @@ banner_style: style3
 				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp.xlsx" class="button icon fa-file-excel-o">file</a></td>
 			</tr>
 			<tr>
-				<td>失業率 <br> <code>gdp.xlsx</code> </td>
+				<td>失業率 <br> <code>unemp.xlsx</code> </td>
 				<td>2025/9/13</td>
 				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/unemp.xlsx" class="button icon fa-file-excel-o">file</a></td>
 			</tr>
@@ -155,7 +155,7 @@ banner_style: style3
 			<tr>
 				<td>賃金&労働生産性（csv） <br> <code>wage_and_productivity.csv</code> </td>
 				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-table-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-file-text-o">file</a></td>
 			</tr>
 			<tr>
 				<td>賃金&その他 <br> <code>wage_and_others.xlsx</code> </td>
