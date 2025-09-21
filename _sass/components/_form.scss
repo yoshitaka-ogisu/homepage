@@ -119,6 +119,16 @@
 		select::-ms-expand {
 			display: none;
 		}
+
+		select {
+        color: _palette(fg) !important;
+        background-color: _palette(bg) !important;
+        
+        option {
+            color: _palette(fg) !important;
+            background-color: _palette(bg) !important;
+        }
+    }
 	}
 
 	input[type="text"],
