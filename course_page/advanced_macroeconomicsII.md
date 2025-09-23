@@ -135,7 +135,7 @@ banner_style: style3
 			<tr>
 				<td>PWT <br> <code>pwt1001.xlsx</code> </td>
 				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt_1001.xlsx" class="button icon fa-file-excel-o">file</a></td>
+				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt1001.xlsx" class="button icon fa-file-excel-o">file</a></td>
 			</tr>
 			<tr>
 				<td>GDP <br> <code>gdp.xlsx</code> </td>
