@@ -35,10 +35,9 @@ banner_style: style5
 		</thead>
 		<tbody>
 			<tr>
-				<td>第1回 配布資料</td>
+				<td>配布資料はBEEF+を通じてお配りします</td>
 				<td></td>
 				<td></td>
-				<!-- <td><a href="{{ site.baseurl }}/assets/pdf/teaching/labor_econ/01-labor.pdf" class="button icon fa-file-pdf-o">file</a></td> -->
 			</tr>
 		</tbody>
 	</table>
