@@ -36,6 +36,13 @@ banner_style: style2
         </tbody>
         <tbody>
             <tr>
+                <td>ネットワークと経済学</td>
+                <td>2025/10/2</td>
+                <td><a href="{{ site.baseurl }}/assets/pdf/teaching/others/network_economics_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
                 <td>閾値拡散モデルシミュレーション</td>
                 <td>2025/10/2</td>
                 <td><a href="{{ site.baseurl }}/assets/html/teaching/others/product_diffusion_sim.html" class="button icon fa-file">page</a></td>
