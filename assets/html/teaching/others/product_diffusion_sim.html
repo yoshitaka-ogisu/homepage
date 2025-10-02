@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製品拡散シミュレーション</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .control-group {
+            margin-bottom: 20px;
+        }
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .control-group select,
+        .control-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #45a049;
+        }
+        .btn-secondary {
+            background: #2196F3;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #0b7dda;
+        }
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+        .btn-danger:hover {
+            background: #da190b;
+        }
+        .main-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #canvas {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        #chart {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+        .status {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 製品拡散シミュレーション</h1>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="control-group">
+                <label>ネットワークタイプ:</label>
+                <select id="networkType">
+                    <option value="random">ランダムネットワーク</option>
+                    <option value="scalefree">スケールフリーネットワーク</option>
+                    <option value="coreperiphery">コア-周辺モデル</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>ノード数: <span id="nodeCountValue">50</span></label>
+                <input type="range" id="nodeCount" min="20" max="1000" value="50">
+            </div>
+            
+            <div class="control-group">
+                <label>ネットワーク密度: <span id="densityValue">0.010</span></label>
+                <input type="range" id="density" min="0.002" max="0.2" step="0.002" value="0.010">
+            </div>
+            
+            <div class="control-group" id="hubControl" style="display:none;">
+                <label>ハブ数: <span id="hubCountValue">3</span></label>
+                <input type="range" id="hubCount" min="1" max="10" value="3">
+            </div>
+            
+            <div class="control-group">
+                <label>製品種類数:</label>
+                <select id="productCount">
+                    <option value="2">2種類 (A vs B)</option>
+                    <option value="3">3種類 (A vs B vs C)</option>
+                    <option value="4">4種類 (A vs B vs C vs D)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>更新方式:</label>
+                <select id="updateMode">
+                    <option value="sync">同期更新</option>
+                    <option value="async">非同期更新</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>選択変更:</label>
+                <select id="changeMode">
+                    <option value="fixed">変更不可</option>
+                    <option value="changeable">変更可能</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>アニメーション速度: <span id="speedValue">500ms</span></label>
+                <input type="range" id="speed" min="10" max="2000" step="10" value="500">
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-primary" onclick="generateNetwork()">ネットワーク生成</button>
+            </div>
+            
+            <div class="info">
+                <strong>使い方:</strong><br>
+                1. ネットワークを生成<br>
+                2. ノードをクリックして初期製品を選択<br>
+                3. 開始ボタンで拡散開始
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-secondary" onclick="startSimulation()">開始</button>
+                <button class="btn-danger" onclick="stopSimulation()">停止</button>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-primary" onclick="resetSimulation()">リセット</button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="legend" id="legend"></div>
+            <div class="status" id="status">ネットワークを生成してください</div>
+            <canvas id="canvas" width="800" height="600"></canvas>
+            <canvas id="chart" width="800" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const chartCanvas = document.getElementById('chart');
+        const chartCtx = chartCanvas.getContext('2d');
+        
+        let nodes = [];
+        let edges = [];
+        let currentProduct = 0;
+        const products = ['A', 'B', 'C', 'D'];
+        const colors = ['#ff4444', '#4444ff', '#ffdd44', '#44ff44'];
+        let running = false;
+        let intervalId = null;
+        let step = 0;
+        let history = [];
+        
+        // コントロールのイベントリスナー
+        document.getElementById('nodeCount').addEventListener('input', (e) => {
+            document.getElementById('nodeCountValue').textContent = e.target.value;
+        });
+        
+        document.getElementById('density').addEventListener('input', (e) => {
+            document.getElementById('densityValue').textContent = parseFloat(e.target.value).toFixed(3);
+        });
+        
+        document.getElementById('hubCount').addEventListener('input', (e) => {
+            document.getElementById('hubCountValue').textContent = e.target.value;
+        });
+        
+        document.getElementById('speed').addEventListener('input', (e) => {
+            document.getElementById('speedValue').textContent = e.target.value + 'ms';
+        });
+        
+        document.getElementById('networkType').addEventListener('change', (e) => {
+            const hubControl = document.getElementById('hubControl');
+            hubControl.style.display = e.target.value === 'scalefree' ? 'block' : 'none';
+        });
+        
+        canvas.addEventListener('click', (e) => {
+            if (running) return;
+            
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // ノードサイズを動的に取得
+            const nodeCount = nodes.length;
+            let nodeRadius = 10;
+            if (nodeCount > 100) nodeRadius = 7;
+            if (nodeCount > 300) nodeRadius = 5;
+            if (nodeCount > 600) nodeRadius = 3;
+            
+            for (let node of nodes) {
+                const dx = x - node.x;
+                const dy = y - node.y;
+                if (dx * dx + dy * dy < nodeRadius * nodeRadius * 4) {
+                    const productCount = parseInt(document.getElementById('productCount').value);
+                    node.state = currentProduct;
+                    currentProduct = (currentProduct + 1) % productCount;
+                    draw();
+                    updateStatus();
+                    break;
+                }
+            }
+        });
+        
+        function generateNetwork() {
+            stopSimulation();
+            const nodeCount = parseInt(document.getElementById('nodeCount').value);
+            const density = parseFloat(document.getElementById('density').value);
+            const networkType = document.getElementById('networkType').value;
+            
+            nodes = [];
+            edges = [];
+            step = 0;
+            history = [];
+            currentProduct = 0;
+            
+            // ノード生成（初期配置はランダム）
+            for (let i = 0; i < nodeCount; i++) {
+                nodes.push({
+                    id: i,
+                    x: Math.random() * (canvas.width - 100) + 50,
+                    y: Math.random() * (canvas.height - 100) + 50,
+                    vx: 0,
+                    vy: 0,
+                    state: -1, // -1: 未購入
+                    nextState: -1
+                });
+            }
+            
+            // ネットワーク生成
+            if (networkType === 'random') {
+                generateRandomNetwork(density);
+            } else if (networkType === 'scalefree') {
+                const hubCount = parseInt(document.getElementById('hubCount').value);
+                generateScaleFreeNetwork(hubCount, density);
+            } else if (networkType === 'coreperiphery') {
+                generateCorePeripheryNetwork(density);
+            }
+            
+            // Force-directed layoutでノードを配置
+            applyForceLayout();
+            
+            draw();
+            updateLegend();
+            updateStatus();
+            drawChart();
+        }
+        
+        function applyForceLayout() {
+            const iterations = 50;
+            const repulsionStrength = 800;
+            const attractionStrength = 0.008;
+            const damping = 0.6;
+            
+            // ノードサイズを取得
+            const nodeCount = nodes.length;
+            let nodeRadius = 10;
+            if (nodeCount > 100) nodeRadius = 7;
+            if (nodeCount > 300) nodeRadius = 5;
+            if (nodeCount > 600) nodeRadius = 3;
+            
+            for (let iter = 0; iter < iterations; iter++) {
+                // 全ノード間の反発力
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[j].x - nodes[i].x;
+                        const dy = nodes[j].y - nodes[i].y;
+                        const distSq = dx * dx + dy * dy + 1;
+                        const dist = Math.sqrt(distSq);
+                        
+                        const force = repulsionStrength / distSq;
+                        
+                        const fx = (dx / dist) * force;
+                        const fy = (dy / dist) * force;
+                        
+                        nodes[i].vx -= fx;
+                        nodes[i].vy -= fy;
+                        nodes[j].vx += fx;
+                        nodes[j].vy += fy;
+                    }
+                }
+                
+                // エッジによる引力
+                for (let edge of edges) {
+                    const from = nodes[edge.from];
+                    const to = nodes[edge.to];
+                    const dx = to.x - from.x;
+                    const dy = to.y - from.y;
+                    
+                    const fx = dx * attractionStrength;
+                    const fy = dy * attractionStrength;
+                    
+                    from.vx += fx;
+                    from.vy += fy;
+                    to.vx -= fx;
+                    to.vy -= fy;
+                }
+                
+                // 位置更新
+                for (let node of nodes) {
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    node.vx *= damping;
+                    node.vy *= damping;
+                    
+                    // キャンバス内に制限（ソフトな境界）
+                    const margin = 50;
+                    if (node.x < margin) node.vx += 0.5;
+                    if (node.x > canvas.width - margin) node.vx -= 0.5;
+                    if (node.y < margin) node.vy += 0.5;
+                    if (node.y > canvas.height - margin) node.vy -= 0.5;
+                    
+                    node.x = Math.max(nodeRadius, Math.min(canvas.width - nodeRadius, node.x));
+                    node.y = Math.max(nodeRadius, Math.min(canvas.height - nodeRadius, node.y));
+                }
+            }
+        }
+        
+        function generateRandomNetwork(density) {
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    if (Math.random() < density) {
+                        edges.push({from: i, to: j});
+                    }
+                }
+            }
+        }
+        
+        function generateScaleFreeNetwork(hubCount, baseDensity) {
+            // ハブノードを選択
+            const hubs = [];
+            for (let i = 0; i < hubCount; i++) {
+                hubs.push(i);
+            }
+            
+            // ハブ間を接続
+            for (let i = 0; i < hubs.length; i++) {
+                for (let j = i + 1; j < hubs.length; j++) {
+                    edges.push({from: hubs[i], to: hubs[j]});
+                }
+            }
+            
+            // 各ノードをハブに優先的に接続
+            for (let i = hubCount; i < nodes.length; i++) {
+                const connectionsPerNode = Math.floor(baseDensity * hubCount * 10) + 1;
+                const connectedHubs = new Set();
+                
+                for (let k = 0; k < connectionsPerNode; k++) {
+                    const hub = hubs[Math.floor(Math.random() * hubs.length)];
+                    if (!connectedHubs.has(hub)) {
+                        edges.push({from: i, to: hub});
+                        connectedHubs.add(hub);
+                    }
+                }
+                
+                // 他のノードとも少し接続
+                if (Math.random() < baseDensity) {
+                    const target = Math.floor(Math.random() * nodes.length);
+                    if (target !== i) {
+                        edges.push({from: i, to: target});
+                    }
+                }
+            }
+        }
+        
+        function generateCorePeripheryNetwork(density) {
+            const coreSize = Math.floor(nodes.length * 0.3);
+            
+            // コア内部は密に接続
+            for (let i = 0; i < coreSize; i++) {
+                for (let j = i + 1; j < coreSize; j++) {
+                    if (Math.random() < density * 3) {
+                        edges.push({from: i, to: j});
+                    }
+                }
+            }
+            
+            // 周辺ノードはコアに接続
+            for (let i = coreSize; i < nodes.length; i++) {
+                const connections = Math.floor(Math.random() * 3) + 1;
+                for (let k = 0; k < connections; k++) {
+                    const coreNode = Math.floor(Math.random() * coreSize);
+                    edges.push({from: i, to: coreNode});
+                }
+                
+                // 周辺同士も少し接続
+                if (Math.random() < density) {
+                    const target = coreSize + Math.floor(Math.random() * (nodes.length - coreSize));
+                    if (target !== i) {
+                        edges.push({from: i, to: target});
+                    }
+                }
+            }
+        }
+        
+        function getNeighbors(nodeId) {
+            const neighbors = [];
+            for (let edge of edges) {
+                if (edge.from === nodeId) neighbors.push(edge.to);
+                if (edge.to === nodeId) neighbors.push(edge.from);
+            }
+            return neighbors;
+        }
+        
+        function updateNode(node) {
+            if (node.state !== -1 && document.getElementById('changeMode').value === 'fixed') {
+                node.nextState = node.state;
+                return;
+            }
+            
+            const neighbors = getNeighbors(node.id);
+            const productCount = parseInt(document.getElementById('productCount').value);
+            const counts = new Array(productCount).fill(0);
+            
+            for (let neighborId of neighbors) {
+                const neighborState = nodes[neighborId].state;
+                if (neighborState !== -1) {
+                    counts[neighborState]++;
+                }
+            }
+            
+            const maxCount = Math.max(...counts);
+            if (maxCount === 0) {
+                node.nextState = node.state;
+                return;
+            }
+            
+            // 最大値を持つ製品を探す
+            const maxProducts = [];
+            for (let i = 0; i < counts.length; i++) {
+                if (counts[i] === maxCount) {
+                    maxProducts.push(i);
+                }
+            }
+            
+            // 同率の場合はランダム選択
+            if (maxProducts.length > 1) {
+                node.nextState = maxProducts[Math.floor(Math.random() * maxProducts.length)];
+            } else {
+                node.nextState = maxProducts[0];
+            }
+        }
+        
+        let updateQueue = [];
+        let isProcessingQueue = false;
+        
+        function simulationStep() {
+            const updateMode = document.getElementById('updateMode').value;
+            
+            if (updateMode === 'sync') {
+                // 同期更新：全ノード評価してから一斉更新
+                for (let node of nodes) {
+                    updateNode(node);
+                }
+                for (let node of nodes) {
+                    node.state = node.nextState;
+                }
+                
+                step++;
+                recordHistory();
+                draw();
+                drawChart();
+                updateStatus();
+            } else {
+                // 非同期更新：ノードをシャッフルしてキューに追加
+                if (updateQueue.length === 0) {
+                    updateQueue = [...nodes].sort(() => Math.random() - 0.5);
+                    step++;
+                }
+            }
+        }
+        
+        function processAsyncUpdate() {
+            if (updateQueue.length === 0) {
+                isProcessingQueue = false;
+                return;
+            }
+            
+            isProcessingQueue = true;
+            const node = updateQueue.shift();
+            
+            updateNode(node);
+            node.state = node.nextState;
+            
+            draw();
+            
+            // キューが空になったらステップ完了
+            if (updateQueue.length === 0) {
+                recordHistory();
+                drawChart();
+                updateStatus();
+            }
+        }
+        
+        function recordHistory() {
+            const productCount = parseInt(document.getElementById('productCount').value);
+            const counts = new Array(productCount).fill(0);
+            
+            for (let node of nodes) {
+                if (node.state !== -1) {
+                    counts[node.state]++;
+                }
+            }
+            
+            // 比率に変換（パーセント）
+            const ratios = counts.map(c => (c / nodes.length) * 100);
+            
+            history.push({step, ratios: [...ratios]});
+        }
+        
+        function startSimulation() {
+            if (running) return;
+            if (nodes.length === 0) {
+                alert('先にネットワークを生成してください');
+                return;
+            }
+            
+            const hasInitial = nodes.some(n => n.state !== -1);
+            if (!hasInitial) {
+                alert('初期ノードを選択してください');
+                return;
+            }
+            
+            running = true;
+            const speed = parseInt(document.getElementById('speed').value);
+            const updateMode = document.getElementById('updateMode').value;
+            
+            if (updateMode === 'sync') {
+                intervalId = setInterval(simulationStep, speed);
+            } else {
+                // 非同期更新の場合は、各ノード更新ごとにアニメーション速度でポーズ
+                intervalId = setInterval(() => {
+                    if (updateQueue.length === 0) {
+                        simulationStep();
+                    }
+                    processAsyncUpdate();
+                }, speed);
+            }
+        }
+        
+        function stopSimulation() {
+            running = false;
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+            updateQueue = [];
+            isProcessingQueue = false;
+        }
+        
+        function resetSimulation() {
+            stopSimulation();
+            for (let node of nodes) {
+                node.state = -1;
+                node.nextState = -1;
+            }
+            step = 0;
+            history = [];
+            currentProduct = 0;
+            draw();
+            drawChart();
+            updateStatus();
+        }
+        
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // ノードサイズを動的に調整
+            const nodeCount = nodes.length;
+            let nodeRadius = 10;
+            if (nodeCount > 100) nodeRadius = 7;
+            if (nodeCount > 300) nodeRadius = 5;
+            if (nodeCount > 600) nodeRadius = 3;
+            
+            // エッジを描画（カーブ付き）
+            ctx.strokeStyle = '#ccc';
+            ctx.lineWidth = 1;
+            for (let edge of edges) {
+                const from = nodes[edge.from];
+                const to = nodes[edge.to];
+                
+                // 中点を計算
+                const mx = (from.x + to.x) / 2;
+                const my = (from.y + to.y) / 2;
+                
+                // 垂直ベクトルを計算してカーブの制御点を作成
+                const dx = to.x - from.x;
+                const dy = to.y - from.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                // カーブの強さ（距離に応じて調整）
+                const curvature = Math.min(dist * 0.15, 30);
+                
+                // 垂直方向にオフセット
+                const offsetX = -dy / dist * curvature;
+                const offsetY = dx / dist * curvature;
+                
+                const cx = mx + offsetX;
+                const cy = my + offsetY;
+                
+                ctx.beginPath();
+                ctx.moveTo(from.x, from.y);
+                ctx.quadraticCurveTo(cx, cy, to.x, to.y);
+                ctx.stroke();
+            }
+            
+            // ノードを描画
+            for (let node of nodes) {
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
+                
+                if (node.state === -1) {
+                    ctx.fillStyle = 'white';
+                } else {
+                    ctx.fillStyle = colors[node.state];
+                }
+                
+                ctx.fill();
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = Math.max(1, nodeRadius / 5);
+                ctx.stroke();
+            }
+        }
+        
+        function drawChart() {
+            chartCtx.clearRect(0, 0, chartCanvas.width, chartCanvas.height);
+            
+            if (history.length === 0) return;
+            
+            const productCount = parseInt(document.getElementById('productCount').value);
+            const maxStep = history[history.length - 1].step;
+            
+            const padding = 40;
+            const chartWidth = chartCanvas.width - 2 * padding;
+            const chartHeight = chartCanvas.height - 2 * padding;
+            
+            // 軸を描画
+            chartCtx.strokeStyle = '#333';
+            chartCtx.lineWidth = 2;
+            chartCtx.beginPath();
+            chartCtx.moveTo(padding, padding);
+            chartCtx.lineTo(padding, chartCanvas.height - padding);
+            chartCtx.lineTo(chartCanvas.width - padding, chartCanvas.height - padding);
+            chartCtx.stroke();
+            
+            // 50%ラインを点線で描画
+            const fiftyPercentY = chartCanvas.height - padding - (50 / 100) * chartHeight;
+            chartCtx.strokeStyle = '#999';
+            chartCtx.lineWidth = 1;
+            chartCtx.setLineDash([5, 5]);
+            chartCtx.beginPath();
+            chartCtx.moveTo(padding, fiftyPercentY);
+            chartCtx.lineTo(chartCanvas.width - padding, fiftyPercentY);
+            chartCtx.stroke();
+            chartCtx.setLineDash([]);
+            
+            // 50%ラベル
+            chartCtx.fillStyle = '#666';
+            chartCtx.font = '10px sans-serif';
+            chartCtx.textAlign = 'right';
+            chartCtx.fillText('50%', padding - 5, fiftyPercentY + 3);
+            
+            // ラベル
+            chartCtx.fillStyle = '#333';
+            chartCtx.font = '12px sans-serif';
+            chartCtx.textAlign = 'center';
+            chartCtx.fillText('ステップ', chartCanvas.width / 2, chartCanvas.height - 5);
+            chartCtx.save();
+            chartCtx.translate(10, chartCanvas.height / 2);
+            chartCtx.rotate(-Math.PI / 2);
+            chartCtx.fillText('普及率 (%)', 0, 0);
+            chartCtx.restore();
+            
+            // Y軸の目盛り
+            chartCtx.textAlign = 'right';
+            chartCtx.font = '10px sans-serif';
+            for (let i = 0; i <= 100; i += 25) {
+                const y = chartCanvas.height - padding - (i / 100) * chartHeight;
+                chartCtx.fillText(i + '%', padding - 5, y + 3);
+            }
+            
+            // データを描画
+            for (let p = 0; p < productCount; p++) {
+                chartCtx.strokeStyle = colors[p];
+                chartCtx.lineWidth = 2;
+                chartCtx.beginPath();
+                
+                for (let i = 0; i < history.length; i++) {
+                    const x = padding + (history[i].step / Math.max(maxStep, 1)) * chartWidth;
+                    const y = chartCanvas.height - padding - (history[i].ratios[p] / 100) * chartHeight;
+                    
+                    if (i === 0) {
+                        chartCtx.moveTo(x, y);
+                    } else {
+                        chartCtx.lineTo(x, y);
+                    }
+                }
+                
+                chartCtx.stroke();
+            }
+        }
+        
+        function updateLegend() {
+            const productCount = parseInt(document.getElementById('productCount').value);
+            const legend = document.getElementById('legend');
+            legend.innerHTML = '<div class="legend-item"><div class="legend-color" style="background:white;"></div><span>未購入</span></div>';
+            
+            for (let i = 0; i < productCount; i++) {
+                legend.innerHTML += `<div class="legend-item"><div class="legend-color" style="background:${colors[i]};"></div><span>${products[i]}財</span></div>`;
+            }
+        }
+        
+        function updateStatus() {
+            const productCount = parseInt(document.getElementById('productCount').value);
+            const counts = new Array(productCount).fill(0);
+            let unpurchased = 0;
+            
+            for (let node of nodes) {
+                if (node.state === -1) {
+                    unpurchased++;
+                } else {
+                    counts[node.state]++;
+                }
+            }
+            
+            const total = nodes.length;
+            let statusText = `ステップ ${step} | 未購入: ${unpurchased} (${(unpurchased/total*100).toFixed(1)}%)`;
+            for (let i = 0; i < productCount; i++) {
+                statusText += ` | ${products[i]}財: ${counts[i]} (${(counts[i]/total*100).toFixed(1)}%)`;
+            }
+            
+            document.getElementById('status').textContent = statusText;
+        }
+        
+        // 初期化
+        updateLegend();
+    </script>
+</body>
+</html>
