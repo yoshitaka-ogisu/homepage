@@ -102,6 +102,7 @@
             padding: 15px;
             border-radius: 4px;
             margin-bottom: 20px;
+            font-size: 13px;
         }
         .legend {
             display: flex;
@@ -154,6 +155,10 @@
                 <input type="range" id="density" min="0.002" max="0.2" step="0.002" value="0.010">
             </div>
             
+            <div class="button-group">
+                <button class="btn-primary" onclick="generateNetwork()">ネットワーク生成</button>
+            </div>
+            
             <div class="control-group" id="hubControl" style="display:none;">
                 <label>ハブ数: <span id="hubCountValue">3</span></label>
                 <input type="range" id="hubCount" min="1" max="10" value="3">
@@ -171,33 +176,36 @@
             <div class="control-group">
                 <label>更新方式:</label>
                 <select id="updateMode">
-                    <option value="sync">同期更新</option>
-                    <option value="async">非同期更新</option>
+                    <option value="sync">同期更新（次更新での製品を全員が選んでから一斉更新）</option>
+                    <option value="async">非同期更新（ランダムに選ばれた人が製品を選んで順次更新）</option>
                 </select>
+                <div style="font-size: 11px; color: #666; margin-top: 5px;">
+                    同期：全員が同時に判断→一斉に変更<br>
+                    非同期：1人ずつランダムに判断→順次変更
+                </div>
             </div>
             
             <div class="control-group">
-                <label>選択変更:</label>
+                <label>選択済財の変更:</label>
                 <select id="changeMode">
-                    <option value="fixed">変更不可</option>
-                    <option value="changeable">変更可能</option>
+                    <option value="fixed">変更不可（一度購入したら変えない）</option>
+                    <option value="changeable">変更可能（乗り換えあり）</option>
                 </select>
             </div>
             
             <div class="control-group">
                 <label>アニメーション速度: <span id="speedValue">500ms</span></label>
-                <input type="range" id="speed" min="10" max="2000" step="10" value="500">
-            </div>
-            
-            <div class="button-group">
-                <button class="btn-primary" onclick="generateNetwork()">ネットワーク生成</button>
+                <input type="range" id="speed" min="10" max="5000" step="10" value="500">
             </div>
             
             <div class="info">
                 <strong>使い方:</strong><br>
                 1. ネットワークを生成<br>
                 2. ノードをクリックして初期製品を選択<br>
-                3. 開始ボタンで拡散開始
+                3. 開始ボタンで拡散開始<br><br>
+                <strong>拡散ルール:</strong><br>
+                各ノードは隣接ノードを見て、最も多い製品を選択します。<br>
+                例：隣人5人中、A財3人・B財2人→A財を購入
             </div>
             
             <div class="button-group">
@@ -233,8 +241,10 @@
         let intervalId = null;
         let step = 0;
         let history = [];
+        let updateQueue = [];
+        let isProcessingQueue = false;
+        let currentStepNodeCount = 0;
         
-        // コントロールのイベントリスナー
         document.getElementById('nodeCount').addEventListener('input', (e) => {
             document.getElementById('nodeCountValue').textContent = e.target.value;
         });
@@ -263,7 +273,6 @@
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             
-            // ノードサイズを動的に取得
             const nodeCount = nodes.length;
             let nodeRadius = 10;
             if (nodeCount > 100) nodeRadius = 7;
@@ -278,6 +287,10 @@
                     node.state = currentProduct;
                     currentProduct = (currentProduct + 1) % productCount;
                     draw();
+                    
+                    // 初期ノード選択時も履歴を記録してグラフ更新
+                    recordHistory();
+                    drawChart();
                     updateStatus();
                     break;
                 }
@@ -295,8 +308,8 @@
             step = 0;
             history = [];
             currentProduct = 0;
+            currentStepNodeCount = 0;
             
-            // ノード生成（初期配置はランダム）
             for (let i = 0; i < nodeCount; i++) {
                 nodes.push({
                     id: i,
@@ -304,12 +317,11 @@
                     y: Math.random() * (canvas.height - 100) + 50,
                     vx: 0,
                     vy: 0,
-                    state: -1, // -1: 未購入
+                    state: -1,
                     nextState: -1
                 });
             }
             
-            // ネットワーク生成
             if (networkType === 'random') {
                 generateRandomNetwork(density);
             } else if (networkType === 'scalefree') {
@@ -319,13 +331,84 @@
                 generateCorePeripheryNetwork(density);
             }
             
-            // Force-directed layoutでノードを配置
             applyForceLayout();
             
             draw();
             updateLegend();
             updateStatus();
+            
+            // 初期状態でもグラフの軸を描画
             drawChart();
+        }
+        
+        function generateRandomNetwork(density) {
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    if (Math.random() < density) {
+                        edges.push({from: i, to: j});
+                    }
+                }
+            }
+        }
+        
+        function generateScaleFreeNetwork(hubCount, baseDensity) {
+            const hubs = [];
+            for (let i = 0; i < hubCount; i++) {
+                hubs.push(i);
+            }
+            
+            for (let i = 0; i < hubs.length; i++) {
+                for (let j = i + 1; j < hubs.length; j++) {
+                    edges.push({from: hubs[i], to: hubs[j]});
+                }
+            }
+            
+            for (let i = hubCount; i < nodes.length; i++) {
+                const connectionsPerNode = Math.floor(baseDensity * hubCount * 10) + 1;
+                const connectedHubs = new Set();
+                
+                for (let k = 0; k < connectionsPerNode; k++) {
+                    const hub = hubs[Math.floor(Math.random() * hubs.length)];
+                    if (!connectedHubs.has(hub)) {
+                        edges.push({from: i, to: hub});
+                        connectedHubs.add(hub);
+                    }
+                }
+                
+                if (Math.random() < baseDensity) {
+                    const target = Math.floor(Math.random() * nodes.length);
+                    if (target !== i) {
+                        edges.push({from: i, to: target});
+                    }
+                }
+            }
+        }
+        
+        function generateCorePeripheryNetwork(density) {
+            const coreSize = Math.floor(nodes.length * 0.3);
+            
+            for (let i = 0; i < coreSize; i++) {
+                for (let j = i + 1; j < coreSize; j++) {
+                    if (Math.random() < density * 3) {
+                        edges.push({from: i, to: j});
+                    }
+                }
+            }
+            
+            for (let i = coreSize; i < nodes.length; i++) {
+                const connections = Math.floor(Math.random() * 3) + 1;
+                for (let k = 0; k < connections; k++) {
+                    const coreNode = Math.floor(Math.random() * coreSize);
+                    edges.push({from: i, to: coreNode});
+                }
+                
+                if (Math.random() < density) {
+                    const target = coreSize + Math.floor(Math.random() * (nodes.length - coreSize));
+                    if (target !== i) {
+                        edges.push({from: i, to: target});
+                    }
+                }
+            }
         }
         
         function applyForceLayout() {
@@ -334,7 +417,6 @@
             const attractionStrength = 0.008;
             const damping = 0.6;
             
-            // ノードサイズを取得
             const nodeCount = nodes.length;
             let nodeRadius = 10;
             if (nodeCount > 100) nodeRadius = 7;
@@ -342,7 +424,6 @@
             if (nodeCount > 600) nodeRadius = 3;
             
             for (let iter = 0; iter < iterations; iter++) {
-                // 全ノード間の反発力
                 for (let i = 0; i < nodes.length; i++) {
                     for (let j = i + 1; j < nodes.length; j++) {
                         const dx = nodes[j].x - nodes[i].x;
@@ -362,7 +443,6 @@
                     }
                 }
                 
-                // エッジによる引力
                 for (let edge of edges) {
                     const from = nodes[edge.from];
                     const to = nodes[edge.to];
@@ -378,14 +458,12 @@
                     to.vy -= fy;
                 }
                 
-                // 位置更新
                 for (let node of nodes) {
                     node.x += node.vx;
                     node.y += node.vy;
                     node.vx *= damping;
                     node.vy *= damping;
                     
-                    // キャンバス内に制限（ソフトな境界）
                     const margin = 50;
                     if (node.x < margin) node.vx += 0.5;
                     if (node.x > canvas.width - margin) node.vx -= 0.5;
@@ -394,83 +472,6 @@
                     
                     node.x = Math.max(nodeRadius, Math.min(canvas.width - nodeRadius, node.x));
                     node.y = Math.max(nodeRadius, Math.min(canvas.height - nodeRadius, node.y));
-                }
-            }
-        }
-        
-        function generateRandomNetwork(density) {
-            for (let i = 0; i < nodes.length; i++) {
-                for (let j = i + 1; j < nodes.length; j++) {
-                    if (Math.random() < density) {
-                        edges.push({from: i, to: j});
-                    }
-                }
-            }
-        }
-        
-        function generateScaleFreeNetwork(hubCount, baseDensity) {
-            // ハブノードを選択
-            const hubs = [];
-            for (let i = 0; i < hubCount; i++) {
-                hubs.push(i);
-            }
-            
-            // ハブ間を接続
-            for (let i = 0; i < hubs.length; i++) {
-                for (let j = i + 1; j < hubs.length; j++) {
-                    edges.push({from: hubs[i], to: hubs[j]});
-                }
-            }
-            
-            // 各ノードをハブに優先的に接続
-            for (let i = hubCount; i < nodes.length; i++) {
-                const connectionsPerNode = Math.floor(baseDensity * hubCount * 10) + 1;
-                const connectedHubs = new Set();
-                
-                for (let k = 0; k < connectionsPerNode; k++) {
-                    const hub = hubs[Math.floor(Math.random() * hubs.length)];
-                    if (!connectedHubs.has(hub)) {
-                        edges.push({from: i, to: hub});
-                        connectedHubs.add(hub);
-                    }
-                }
-                
-                // 他のノードとも少し接続
-                if (Math.random() < baseDensity) {
-                    const target = Math.floor(Math.random() * nodes.length);
-                    if (target !== i) {
-                        edges.push({from: i, to: target});
-                    }
-                }
-            }
-        }
-        
-        function generateCorePeripheryNetwork(density) {
-            const coreSize = Math.floor(nodes.length * 0.3);
-            
-            // コア内部は密に接続
-            for (let i = 0; i < coreSize; i++) {
-                for (let j = i + 1; j < coreSize; j++) {
-                    if (Math.random() < density * 3) {
-                        edges.push({from: i, to: j});
-                    }
-                }
-            }
-            
-            // 周辺ノードはコアに接続
-            for (let i = coreSize; i < nodes.length; i++) {
-                const connections = Math.floor(Math.random() * 3) + 1;
-                for (let k = 0; k < connections; k++) {
-                    const coreNode = Math.floor(Math.random() * coreSize);
-                    edges.push({from: i, to: coreNode});
-                }
-                
-                // 周辺同士も少し接続
-                if (Math.random() < density) {
-                    const target = coreSize + Math.floor(Math.random() * (nodes.length - coreSize));
-                    if (target !== i) {
-                        edges.push({from: i, to: target});
-                    }
                 }
             }
         }
@@ -507,7 +508,6 @@
                 return;
             }
             
-            // 最大値を持つ製品を探す
             const maxProducts = [];
             for (let i = 0; i < counts.length; i++) {
                 if (counts[i] === maxCount) {
@@ -515,7 +515,6 @@
                 }
             }
             
-            // 同率の場合はランダム選択
             if (maxProducts.length > 1) {
                 node.nextState = maxProducts[Math.floor(Math.random() * maxProducts.length)];
             } else {
@@ -523,14 +522,10 @@
             }
         }
         
-        let updateQueue = [];
-        let isProcessingQueue = false;
-        
         function simulationStep() {
             const updateMode = document.getElementById('updateMode').value;
             
             if (updateMode === 'sync') {
-                // 同期更新：全ノード評価してから一斉更新
                 for (let node of nodes) {
                     updateNode(node);
                 }
@@ -544,10 +539,10 @@
                 drawChart();
                 updateStatus();
             } else {
-                // 非同期更新：ノードをシャッフルしてキューに追加
                 if (updateQueue.length === 0) {
                     updateQueue = [...nodes].sort(() => Math.random() - 0.5);
                     step++;
+                    currentStepNodeCount = 0;
                 }
             }
         }
@@ -560,18 +555,16 @@
             
             isProcessingQueue = true;
             const node = updateQueue.shift();
+            currentStepNodeCount++;
             
             updateNode(node);
             node.state = node.nextState;
             
+            // 毎回描画・グラフ更新でリアルタイム性を最大化
             draw();
-            
-            // キューが空になったらステップ完了
-            if (updateQueue.length === 0) {
-                recordHistory();
-                drawChart();
-                updateStatus();
-            }
+            recordHistory();
+            drawChart();
+            updateStatus();
         }
         
         function recordHistory() {
@@ -584,10 +577,14 @@
                 }
             }
             
-            // 比率に変換（パーセント）
             const ratios = counts.map(c => (c / nodes.length) * 100);
             
-            history.push({step, ratios: [...ratios]});
+            // 同じステップの履歴を更新（非同期更新中）または追加
+            if (history.length > 0 && history[history.length - 1].step === step) {
+                history[history.length - 1].ratios = [...ratios];
+            } else {
+                history.push({step, ratios: [...ratios]});
+            }
         }
         
         function startSimulation() {
@@ -610,7 +607,6 @@
             if (updateMode === 'sync') {
                 intervalId = setInterval(simulationStep, speed);
             } else {
-                // 非同期更新の場合は、各ノード更新ごとにアニメーション速度でポーズ
                 intervalId = setInterval(() => {
                     if (updateQueue.length === 0) {
                         simulationStep();
@@ -639,6 +635,7 @@
             step = 0;
             history = [];
             currentProduct = 0;
+            currentStepNodeCount = 0;
             draw();
             drawChart();
             updateStatus();
@@ -647,33 +644,27 @@
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // ノードサイズを動的に調整
             const nodeCount = nodes.length;
             let nodeRadius = 10;
             if (nodeCount > 100) nodeRadius = 7;
             if (nodeCount > 300) nodeRadius = 5;
             if (nodeCount > 600) nodeRadius = 3;
             
-            // エッジを描画（カーブ付き）
             ctx.strokeStyle = '#ccc';
             ctx.lineWidth = 1;
             for (let edge of edges) {
                 const from = nodes[edge.from];
                 const to = nodes[edge.to];
                 
-                // 中点を計算
                 const mx = (from.x + to.x) / 2;
                 const my = (from.y + to.y) / 2;
                 
-                // 垂直ベクトルを計算してカーブの制御点を作成
                 const dx = to.x - from.x;
                 const dy = to.y - from.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 
-                // カーブの強さ（距離に応じて調整）
                 const curvature = Math.min(dist * 0.15, 30);
                 
-                // 垂直方向にオフセット
                 const offsetX = -dy / dist * curvature;
                 const offsetY = dx / dist * curvature;
                 
@@ -686,7 +677,6 @@
                 ctx.stroke();
             }
             
-            // ノードを描画
             for (let node of nodes) {
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
@@ -707,16 +697,12 @@
         function drawChart() {
             chartCtx.clearRect(0, 0, chartCanvas.width, chartCanvas.height);
             
-            if (history.length === 0) return;
-            
             const productCount = parseInt(document.getElementById('productCount').value);
-            const maxStep = history[history.length - 1].step;
-            
             const padding = 40;
             const chartWidth = chartCanvas.width - 2 * padding;
             const chartHeight = chartCanvas.height - 2 * padding;
             
-            // 軸を描画
+            // 軸を常に描画
             chartCtx.strokeStyle = '#333';
             chartCtx.lineWidth = 2;
             chartCtx.beginPath();
@@ -725,7 +711,7 @@
             chartCtx.lineTo(chartCanvas.width - padding, chartCanvas.height - padding);
             chartCtx.stroke();
             
-            // 50%ラインを点線で描画
+            // 50%ラインを常に描画
             const fiftyPercentY = chartCanvas.height - padding - (50 / 100) * chartHeight;
             chartCtx.strokeStyle = '#999';
             chartCtx.lineWidth = 1;
@@ -736,13 +722,12 @@
             chartCtx.stroke();
             chartCtx.setLineDash([]);
             
-            // 50%ラベル
             chartCtx.fillStyle = '#666';
             chartCtx.font = '10px sans-serif';
             chartCtx.textAlign = 'right';
             chartCtx.fillText('50%', padding - 5, fiftyPercentY + 3);
             
-            // ラベル
+            // ラベルを常に描画
             chartCtx.fillStyle = '#333';
             chartCtx.font = '12px sans-serif';
             chartCtx.textAlign = 'center';
@@ -753,13 +738,18 @@
             chartCtx.fillText('普及率 (%)', 0, 0);
             chartCtx.restore();
             
-            // Y軸の目盛り
+            // Y軸の目盛りを常に描画
             chartCtx.textAlign = 'right';
             chartCtx.font = '10px sans-serif';
             for (let i = 0; i <= 100; i += 25) {
                 const y = chartCanvas.height - padding - (i / 100) * chartHeight;
                 chartCtx.fillText(i + '%', padding - 5, y + 3);
             }
+            
+            // データがあれば描画
+            if (history.length === 0) return;
+            
+            const maxStep = history[history.length - 1].step;
             
             // データを描画
             for (let p = 0; p < productCount; p++) {
@@ -806,7 +796,15 @@
             }
             
             const total = nodes.length;
-            let statusText = `ステップ ${step} | 未購入: ${unpurchased} (${(unpurchased/total*100).toFixed(1)}%)`;
+            const updateMode = document.getElementById('updateMode').value;
+            
+            let statusText = `ステップ ${step}`;
+            
+            if (updateMode === 'async' && currentStepNodeCount > 0) {
+                statusText += ` (${currentStepNodeCount}/${total}ノード処理中)`;
+            }
+            
+            statusText += ` | 未購入: ${unpurchased} (${(unpurchased/total*100).toFixed(1)}%)`;
             for (let i = 0; i < productCount; i++) {
                 statusText += ` | ${products[i]}財: ${counts[i]} (${(counts[i]/total*100).toFixed(1)}%)`;
             }
@@ -814,7 +812,6 @@
             document.getElementById('status').textContent = statusText;
         }
         
-        // 初期化
         updateLegend();
     </script>
 </body>
