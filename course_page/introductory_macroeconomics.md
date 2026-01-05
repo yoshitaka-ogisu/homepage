@@ -41,6 +41,13 @@ banner_style: style1
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/introductory_macro_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
+		<tbody>
+			<tr>
+				<td>入門マクロ経済学 キーワードとポイント</td>
+				<td>2026/1/5</td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/keywords.pdf" class="button icon fa-file-pdf-o">file</a></td>
+			</tr>
+		</tbody>
 	</table>
 </div>
 
