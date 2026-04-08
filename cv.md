@@ -32,12 +32,13 @@ Macroeconomics, Labor Economics, Network Science
 
 # Lecture
 
-- **Introductory Macroeconomics** (Undergraduate) Konan University (2024 2nd semester).
-- **Intermediate Macroeconomics** (Undergraduate) Kobe University (2024 2nd semester).
-- **Advanced Macroeconomics II** (Undergraduate) Konan University (2024 2nd semester).
-- **Labor Economics II** (Undergraduate) Konan University (2024 1st semester).
-- **Introductory Statistics** (Undergraduate) Konan University (2024 1st semester).
-- **Introductory Mathematics for Economics** (Undergraduate) Kwansei Gakuin University (2021 1st semester).
+- **Introductory Macroeconomics** (Undergraduate) Konan University (2024--).
+- **Advanced Macroeconomics II** (Undergraduate) Konan University (2024--).
+- **Introductory Statistics** (Undergraduate) Konan University (2024--).
+- **Japanese Economy** (Undergraduate) Kobe University (2025).
+- **Labor Economics II** (Undergraduate) Konan University (2024).
+- **Intermediate Macroeconomics** (Undergraduate) Kobe University (2024).
+- **Introductory Mathematics for Economics** (Undergraduate) Kwansei Gakuin University (2021).
 
 # Published Paper
 
