@@ -38,7 +38,11 @@ exclude:
 - "*.gemspec"
 - LICENSE.md
 - CONTRIBUTING.md
-- README.md 
+- README.md
+- cv.md
+- cv_jp.md
+- build-cv.sh
+- _pandoc/
 
 # for sitemap
 plugins:
