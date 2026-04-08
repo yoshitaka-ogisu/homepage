@@ -1,0 +1,31 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - cv.md
+      - cv_jp.md
+      - _pandoc/cv-template.tex
+      - _pandoc/cv-jp-template.tex
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-luatex texlive-lang-japanese
+
+      - name: Build PDFs
+        run: bash build-cv.sh
+
+      - name: Commit PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/pdf/profile/CV.pdf assets/pdf/profile/CV_jp.pdf
+          git diff --cached --quiet || git commit -m "Auto-build CV PDFs from markdown"
+          git push

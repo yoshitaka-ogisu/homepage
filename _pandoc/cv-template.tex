@@ -1,0 +1,39 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{hanging}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% Section style: bold, left-aligned, with horizontal rule
+\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.2em}{0.5em}
+
+% List spacing
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.5em}
+\setlist[enumerate]{noitemsep, topsep=2pt, leftmargin=1.5em}
+
+% Definition list style (for Prize, Grants)
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\LARGE $name$}\\[0.3em]
+  $position1$\\
+  $position2$
+\end{center}
+
+\vspace{1em}
+
+$body$
+
+\end{document}
