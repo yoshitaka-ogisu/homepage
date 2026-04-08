@@ -46,7 +46,8 @@ Macroeconomics, Labor Economics, Network Science
 
 # Preprint
 
-1. Ogisu, Y., S. Hayaki and M. Shibamoto (2024) "Identification of Relationship Lending in Bank-Borrower Networks," RIEB Discussion Paper Series, DP2025-02.
+1. Ogisu, Y. (2026) "Unemployment Fluctuation and Referral Hiring," RIEB Discussion Paper Series, DP2026-12.
+2. Ogisu, Y., S. Hayaki and M. Shibamoto (2024) "Identification of Relationship Lending in Bank-Borrower Networks," RIEB Discussion Paper Series, DP2025-02.
 2. Ogisu, Y. (2023) "Impacts and Distribution of Premiums from Temporal Social Networks across Generations," RIEB Discussion Paper Series, DP2023-13.
 3. Ogisu, Y. (2022) "Referral Hiring and Social Network Structure," arXiv:2201.06020.
 
