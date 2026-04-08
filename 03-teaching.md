@@ -16,20 +16,12 @@ banner_style: style3
 
 <!-- Content -->
 
-<h2 id="content" class="major">担当科目（2025）</h2>
+<h2 id="content" class="major">担当科目（2026）</h2>
 	<section id="page-teaching" class="tiles">
 		<article style="style1">
 			<a href="{{ site.baseurl }}/course_page/introductory_macroeconomics.html" class="link primary">
 				<header class="major">
 					<h3>入門マクロ経済学</h3>
-					<p>甲南大学/経済学部</p>
-				</header>
-			</a>
-		</article>
-		<article style="style2">
-			<a href="{{ site.baseurl }}/course_page/labor_economicsII.html" class="link primary">
-				<header class="major">
-					<h3>労働経済II</h3>
 					<p>甲南大学/経済学部</p>
 				</header>
 			</a>
@@ -47,14 +39,6 @@ banner_style: style3
 				<header class="major">
 					<h3>統計入門</h3>
 					<p>甲南大学/経済学部</p>
-				</header>
-			</a>
-		</article>
-		<article style="style4">
-			<a href="{{ site.baseurl }}/course_page/japanese_economy.html" class="link primary">
-				<header class="major">
-					<h3>日本経済論</h3>
-					<p>神戸大学/経済学部</p>
 				</header>
 			</a>
 		</article>
@@ -78,22 +62,27 @@ banner_style: style3
 			<tr>
 				<td>入門マクロ経済学</td>
 				<td>甲南大学</td>
-				<td>2024/後期</td>
+				<td>202-25/後期</td>
 			</tr>
 			<tr>
 				<td>上級マクロ経済学</td>
 				<td>甲南大学</td>
-				<td>2024/後期</td>
+				<td>2024-25/後期</td>
 			</tr>
 			<tr>
 				<td>労働経済II</td>
 				<td>甲南大学</td>
-				<td>2024/前期</td>
+				<td>2024-25/前期</td>
 			</tr>
 			<tr>
 				<td>統計入門</td>
 				<td>甲南大学</td>
-				<td>2024/前期</td>
+				<td>2024-25/前期</td>
+			</tr>
+			<tr>
+				<td>日本経済論</td>
+				<td>神戸大学</td>
+				<td>2025/後期</td>
 			</tr>
 			<tr>
 				<td>中級マクロ経済学</td>

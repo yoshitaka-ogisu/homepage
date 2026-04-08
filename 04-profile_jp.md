@@ -32,6 +32,7 @@ banner_style: style4
           <div class="4u 12u$(small)">
             <ul>
               <li> <a href="https://scholar.google.co.jp/citations?user=olbpst8AAAAJ">Google Scholar</a></li>
+              <li> <a href="https://ideas.repec.org/e/pog91.html">RePEc</a></li>
               <li> <a href="https://researchmap.jp/yoshitaka_ogisu">Researchmap</a></li>
             </ul>
           </div>
