@@ -62,7 +62,7 @@ banner_style: style3
 			<tr>
 				<td>入門マクロ経済学</td>
 				<td>甲南大学</td>
-				<td>202-25/後期</td>
+				<td>2024-25/後期</td>
 			</tr>
 			<tr>
 				<td>上級マクロ経済学</td>
