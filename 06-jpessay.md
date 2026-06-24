@@ -30,6 +30,11 @@ banner_style: style6
         </thead>
         <tbody>
             <tr>
+                <td> <a href="https://www.rieb.kobe-u.ac.jp/research/publication/newsletter/column_back-issues/file/column281.pdf">「なかよし」を探る</a> </td>
+                <td>RIEBニュースレター コラム　No.281</td>
+                <td>2026/2/20</td>
+            </tr>
+            <tr>
                 <td> <a href="https://www.konan-u.ac.jp/konan-planet/academic/tsunagarikeizai/">コネ採用ってズルい？ それとも合理的？ 知られざる&ldquo;つながり経済&rdquo;の仕組み</a> </td>
                 <td>KONAN-PLANET</td>
                 <td>2026/2/20</td>
