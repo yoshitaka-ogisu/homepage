@@ -74,6 +74,7 @@ yoshitaka.ogisu@gmail.com
 - 2021年5月 六甲フォーラム，神戸大学（オンライン）．
 - 2021年2月 Nagoya Macroeconomics Workshop（オンライン）．
 
+
 # 表彰
 
 2023

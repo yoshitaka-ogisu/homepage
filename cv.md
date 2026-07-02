@@ -72,6 +72,7 @@ Macroeconomics, Labor Economics, Network Science
 - Rokko Forum, Kobe University, May. 2021 (online).
 - Nagoya Macroeconomics Workshop Feb. 2021 (online).
 
+
 # Prize
 
 2023
