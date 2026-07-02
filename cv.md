@@ -24,8 +24,6 @@ Macroeconomics, Labor Economics, Network Science
 
 # Affiliated Academic Society
 
-- Econometric Society.
-- Western Economic Association International.
 - Japanese Economic Association.
 - Japan Association for Applied Economics.
 - Japan Society of Monetary Economics.
@@ -36,7 +34,7 @@ Macroeconomics, Labor Economics, Network Science
 - **Advanced Macroeconomics II** (Undergraduate) Konan University (2024--).
 - **Introductory Statistics** (Undergraduate) Konan University (2024--).
 - **Japanese Economy** (Undergraduate) Kobe University (2025).
-- **Labor Economics II** (Undergraduate) Konan University (2024).
+- **Labor Economics II** (Undergraduate) Konan University (2024, 2025).
 - **Intermediate Macroeconomics** (Undergraduate) Kobe University (2024).
 - **Introductory Mathematics for Economics** (Undergraduate) Kwansei Gakuin University (2021).
 
@@ -54,7 +52,7 @@ Macroeconomics, Labor Economics, Network Science
 
 # Presentation
 
-- CASE2025, Prome Morioka Kaiunbashi, Aug. 2025.
+- Conference on Advanced Studies in Economics (CASE), Prome Morioka Kaiunbashi, Aug. 2025.
 - WINPEC Workshop (Macroeconomics), Waseda University, Jul. 2025.
 - Western Economic Association International 100th Annual Conference, San Francisco Marriott Marquis, Jun. 2025.
 - The 2nd Joint CCSS-UvA Workshop on Computational Social Science and Intelligent Systems, Amsterdam 2025, University of Amsterdam, Mar. 2025.
@@ -80,6 +78,9 @@ Macroeconomics, Labor Economics, Network Science
 :   Kanematsu Prize (FY 2022), Research Institute for Economics and Business Administration (RIEB), Kobe University.
 
 # Grants, Scholarship
+
+Apr. 2026 -- Mar. 2031
+:   JSPS KAKENHI: 26K16375.
 
 Jul. 2024 -- Mar. 2026
 :   JSPS KAKENHI: 24K22648.
