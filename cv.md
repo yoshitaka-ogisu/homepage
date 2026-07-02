@@ -22,6 +22,14 @@ Macroeconomics, Labor Economics, Network Science
 - B.A. in Economics (Nanzan University, Japan) March 2019.\
   Adviser: Akira Yakita
 
+# Employment
+
+- **Faculty of Economics, Konan University** \
+  Lecturer (Tenured) \hfill *Apr. 2024 -- present*
+- **Research Institute for Economics and Business Administration, Kobe University** \
+  Project Associate Professor \hfill *Sep. 2025 -- present*
+
+
 # Affiliated Academic Society
 
 - Japanese Economic Association.
