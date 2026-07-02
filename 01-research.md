@@ -69,7 +69,17 @@ nav-menu: true
 			<div class="inner">
 				<ul class="alt">
 					{% for pub in site.data.working %}
-						<li>{{ pub.title }} (related with {{ pub.field | join: ', ' }}).</li>
+						<li class="publication-item">
+							<div class="pablication-content">
+								{{ pub.title }} (related with {{ pub.field | join: ', ' }}).
+							</div>
+							{% if pub.material %}
+							<div class="publication-action">
+								<a href="{{ pub.material }}" class="button">file</a>
+							</div>
+							{% endif %}
+						</li>
+						<li></li>
 					{% endfor %}
 				</ul>
 			</div>
