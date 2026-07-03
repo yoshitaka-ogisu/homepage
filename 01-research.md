@@ -79,7 +79,6 @@ nav-menu: true
 							</div>
 							{% endif %}
 						</li>
-						<li></li>
 					{% endfor %}
 				</ul>
 			</div>
