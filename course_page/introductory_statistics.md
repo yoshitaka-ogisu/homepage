@@ -74,7 +74,7 @@ banner_style: style4
 <section>
   <div class="inner" align="center">
 	<ul class="actions">
-	  <li><a href="index.html" class="button">Home</a></li>
+	  <li><a href="{{ site.baseurl }}/index.html" class="button">Home</a></li>
 	  <li><a href="#banner" class="button special scroll">Page top</a></li>
 	</ul>
   </div>
