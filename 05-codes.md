@@ -24,7 +24,7 @@ banner_style: style5
             Python library to detect significant ties (ST) from temporal networks.
                 <ul>
                     <li>Distributing ST filter for unipartite networks and ST-B filter for bipartite networks.</li>
-                    <li>You can find details about significant ties in <a helf="https://www.nature.com/articles/s41467-018-08160-3">Kobayashi et al. (2019)</a> for unipartite networks and <a helf="https://www.rieb.kobe-u.ac.jp/academic/ra/dp/English/DP2025-02.pdf">Ogisu et al. (2025)</a> for bipartite networks.</li>
+                    <li>You can find details about significant ties in <a href="https://www.nature.com/articles/s41467-018-08160-3">Kobayashi et al. (2019)</a> for unipartite networks and <a href="https://www.rieb.kobe-u.ac.jp/academic/ra/dp/English/DP2025-02.pdf">Ogisu et al. (2025)</a> for bipartite networks.</li>
                     <li>Python library is distributed on my GitHub.</li>
                 </ul>
             </p>
