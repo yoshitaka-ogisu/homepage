@@ -39,137 +39,13 @@ banner_style: style3
 		<tbody>
 			<tr>
 				<td>第1回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main1.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第2回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main2.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第3回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main3.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第4回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main4.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第5回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main5.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第6回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main6.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第7回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main7.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第8回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main8.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第9回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main9.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第10回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main10.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第11回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main11.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第12回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main12.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第13回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main13.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第14回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main14.html" class="button icon fa-file-o">file</a></td>
-			</tr>
-			<tr>
-				<td>第15回資料</td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/main15.html" class="button icon fa-file-o">file</a></td>
+				<td>2026/8/15</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout1.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
-<h3>データ</h3>
-<div class="table-wrapper">
-	<table>
-		<thead>
-			<tr>
-				<th>コンテンツ</th>
-				<th>アップデート日</th>
-				<th>ダウンロードリンク</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>PWT（抜粋） <br> <code>pwt_part_data.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt_part_data.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>PWT <br> <code>pwt1001.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/pwt1001.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>GDP <br> <code>gdp.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>失業率 <br> <code>unemp.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/unemp.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>賃金&労働生産性（excel） <br> <code>wage_and_productivity.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>賃金&労働生産性（csv） <br> <code>wage_and_productivity.csv</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_productivity.csv" class="button icon fa-file-text-o">file</a></td>
-			</tr>
-			<tr>
-				<td>賃金&その他 <br> <code>wage_and_others.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/wage_and_others.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-			<tr>
-				<td>GDPギャップ <br> <code>gdp_gap.xlsx</code> </td>
-				<td>2025/9/13</td>
-				<td><a href="{{ site.baseurl }}/assets/data/teaching/advanced_macroeconomicsII/gdp_gap.xlsx" class="button icon fa-file-excel-o">file</a></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
 
 <h3>補足資料</h3>
 <div class="table-wrapper">
@@ -196,6 +72,7 @@ banner_style: style3
 	</table>
 </div>
 
+
 <hr class="major" />
 
 <div class="row">
@@ -218,6 +95,46 @@ banner_style: style3
 </div>
 
 <hr class="major" />
+
+<div class="row">
+	<div class="6u$ 12u$(small)" style="float: none; margin: 0 auto;">
+		<header>
+			<h3>質問フォーム</h3>
+		</header>
+		<!--質問-->
+		<br>
+		<form method="post" action="https://YoshitakaOgisu.pythonanywhere.com/submit_reaction"> 
+			<!-- 講義識別子 -->
+			<input type="hidden" name="course_id" value="adv_macroII">
+			<!--コンテンツ識別子-->
+			<input type="hidden" name="content_type" value="qa">
+			<div class="row">
+				<div class="4u 12u$(small)">
+					<h4 align="center">名前（任意）</h4>
+				</div>
+				<div class="8u$ 12u$(small)">
+					<input type="text" name="student_name" id="student_name" placeholder="名無しさん"/>
+				</div>
+			</div>
+			<br>
+			<!-- 質問内容 -->
+			<h4>質問</h4>
+			<textarea name="adv_macroII_question" id="adv_macroII_question" 
+					placeholder="質問を入力してください" rows="6" required></textarea>
+			<br>
+			<div class="12u$" align="center">
+				<ul class="actions">
+					<li><input type="submit" value="質問送信" class="special" /></li>
+					<li><input type="reset" value="リセット" /></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<hr class="major" />
+
 
 <section>
   <div class="inner" align="center">

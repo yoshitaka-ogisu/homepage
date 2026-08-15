@@ -107,10 +107,12 @@ banner_style: style3
 <section>
   <div class="inner" align="center">
 	<ul class="actions">
+	  <li><a href="{{ site.baseurl }}/course_page/archives.html" class="button">過去の講義資料</a></li>
 	  <li><a href="{{ site.baseurl }}/course_page/others.html" class="button">その他資料</a></li>
 	</ul>
   </div>
 </section>
+
 
 <hr class="major" />
 
