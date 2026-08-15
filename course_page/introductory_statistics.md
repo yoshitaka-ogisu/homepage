@@ -5,7 +5,7 @@ description: 甲南大学/経済学部
 image: 
 nav-menu: false
 show_tile: false
-banner_style: style4
+banner_style: style2
 ---
 
 <!-- Main -->
