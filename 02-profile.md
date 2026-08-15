@@ -70,8 +70,6 @@ banner_style: style2
       </header>
       <div>
         <ul>
-          <li>Econometric Society</li>
-          <li>Western Economic Association International</li>
           <li>Japanese Economic Association</li>
           <li>Japan Association for Applied Economics</li>
           <li>Japan Society of Monetary Economics</li>

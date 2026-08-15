@@ -71,8 +71,6 @@ banner_style: style4
       </header>
       <div>
         <ul>
-          <li>Econometric Society</li>
-          <li>Western Economic Association International</li>
           <li>日本経済学会</li>
           <li>日本応用経済学会</li>
           <li>日本金融学会</li>
