@@ -64,7 +64,7 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>第6回資料</td>
-				<td>2026/9/17</td>
+				<td>2026/9/27</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout6.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
