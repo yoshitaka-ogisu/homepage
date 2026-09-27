@@ -40,12 +40,20 @@ banner_style: style1
 				<td>2026/9/22</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/introductory_macro_handout.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
-		</tbody>
-		<tbody>
 			<tr>
 				<td>入門マクロ経済学 キーワードとポイント</td>
 				<td>2026/9/22</td>
 				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/keywords.pdf" class="button icon fa-file-pdf-o">file</a></td>
+			</tr>
+			<tr>
+				<td>入門マクロ経済学 中間テスト過去問</td>
+				<td>2026/9/28</td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/2025_midterm_exam.pdf" class="button icon fa-file-pdf-o">file</a></td>
+			</tr>
+			<tr>
+				<td>入門マクロ経済学 期末テスト過去問</td>
+				<td>2026/9/28</td>
+				<td><a href="{{ site.baseurl }}/assets/pdf/teaching/introductory_macroeconomics/2025_final_exam.pdf" class="button icon fa-file-pdf-o">file</a></td>
 			</tr>
 		</tbody>
 	</table>
