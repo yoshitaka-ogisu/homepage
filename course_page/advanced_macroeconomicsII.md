@@ -44,7 +44,7 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>第2回資料</td>
-				<td>2026/9/17</td>
+				<td>2026/10/12</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout2.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
