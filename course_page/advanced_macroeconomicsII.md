@@ -39,12 +39,12 @@ banner_style: style2
 		<tbody>
 			<tr>
 				<td>第1回資料</td>
-				<td>2026/8/21</td>
+				<td>2026/10/20</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout1.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第2回資料</td>
-				<td>2026/10/12</td>
+				<td>2026/10/20</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout2.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
