@@ -39,37 +39,42 @@ banner_style: style2
 		<tbody>
 			<tr>
 				<td>第1回資料</td>
-				<td>2026/10/20</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout1.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第2回資料</td>
-				<td>2026/10/20</td>
+				<td>22026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout2.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第3回資料</td>
-				<td>2026/9/17</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout3.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第4回資料</td>
-				<td>2026/9/17</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout4.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第5回資料</td>
-				<td>2026/9/17</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout5.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>第6回資料</td>
-				<td>2026/9/27</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout6.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
+				<td>第7回資料</td>
+				<td>2026/11/3</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout7.html" class="button icon fa-file-o">file</a></td>
+			</tr>
+			<tr>
 				<td>練習問題</td>
-				<td>2026/9/27</td>
+				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/excercise.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 		</tbody>
