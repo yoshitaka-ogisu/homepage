@@ -18,10 +18,10 @@ banner_style: style2
 <!-- Content -->
 <h2>概要</h2>
 <blockquote>
-マクロ経済学で扱うデータについて概観する。
-また、pythonを用いて実際にマクロ経済データを分析することを行う。
-講義では回帰分析をもとに、生産性の推定やマクロデータの予測などを取り扱う。
-さらに、近年盛んに利用されるようになっている、数値計算の基礎についても解説を行う。
+日本経済をはじめ、マクロの経済を取り巻く問題は数多い。
+近年の情報技術の発展により、観測・収集されるデータは数多ある。
+一方で、それを適切に解釈するためには一定水準の知識の地盤が必要となる。
+本講義では発展的なマクロ経済学のトピックスを紹介することを通じて、データと理論を比較しながら経済を見る目を養うことを目的とする。
 </blockquote>
 
 <hr class="major" />
@@ -71,6 +71,11 @@ banner_style: style2
 				<td>第7回資料</td>
 				<td>2026/11/3</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout7.html" class="button icon fa-file-o">file</a></td>
+			</tr>
+			<tr>
+				<td>第8回資料</td>
+				<td>2026/11/15</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout8.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
 				<td>練習問題</td>
