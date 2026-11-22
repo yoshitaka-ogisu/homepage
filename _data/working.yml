@@ -9,3 +9,8 @@
     - "macro"
     - "banking"
   material: "assets/pdf/slides/relationship_lending_and_business_cycle_slide.pdf"
+
+
+- title: "Identifying memory effects in the persistence and reactivation of social ties (with T. Kobayashi)"
+  field: 
+    - "network science"

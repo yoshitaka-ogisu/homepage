@@ -3,7 +3,7 @@ layout: page
 title: Archives
 description: 日本語ページ
 image: 
-nav-menu: true
+nav-menu: false
 banner_style: style3
 ---
 
