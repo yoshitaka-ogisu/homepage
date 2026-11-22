@@ -74,12 +74,17 @@ banner_style: style2
 			</tr>
 			<tr>
 				<td>第8回資料</td>
-				<td>2026/11/15</td>
+				<td>2026/11/22</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout8.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 			<tr>
+				<td>第9回資料</td>
+				<td>2026/11/22</td>
+				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/handout9.html" class="button icon fa-file-o">file</a></td>
+			</tr>
+			<tr>
 				<td>練習問題</td>
-				<td>2026/11/3</td>
+				<td>2026/11/22</td>
 				<td><a href="{{ site.baseurl }}/assets/html/teaching/advanced_macroeconomicsII/excercise.html" class="button icon fa-file-o">file</a></td>
 			</tr>
 		</tbody>

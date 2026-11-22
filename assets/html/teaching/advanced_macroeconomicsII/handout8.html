@@ -3273,9 +3273,16 @@ Y =  \left[ \gamma_H (A_H H)^{\frac{\epsilon - 1}{\epsilon}} + \gamma_L (A_L L)^
 </section>
 <section id="補足代替の弾力性" class="level2">
 <h2 class="anchored" data-anchor-id="補足代替の弾力性">補足：代替の弾力性</h2>
-<p>代替の弾力性は1%の価格比の変化に対する要素比の変化． * 今回のケースだと: * <span class="math inline">\omega=w_H/w_L</span>が価格比． * <span class="math inline">H/L</span>が要素比． <span class="math display">
+<p>代替の弾力性は1%の価格比の変化に対する要素比の変化．</p>
+<ul>
+<li>今回のケースだと:
+<ul>
+<li><span class="math inline">\omega=w_H/w_L</span>が価格比．</li>
+<li><span class="math inline">H/L</span>が要素比． <span class="math display">
 \log \left( \frac{H}{L} \right) = - \epsilon \log \omega + \epsilon \log \frac{\gamma_H}{\gamma_L} + (\epsilon -1)\log \left( \frac{A_H}{A_L}\right)
-</span></p>
+</span></li>
+</ul></li>
+</ul>
 <p><span class="math display">
 代替の弾力性 = - \frac{\partial \log (H/L)}{\partial \log \omega} = \epsilon
 </span></p>
@@ -3296,7 +3303,7 @@ Y =  \left[ \gamma_H (A_H H)^{\frac{\epsilon - 1}{\epsilon}} + \gamma_L (A_L L)^
 <ul>
 <li><span class="math inline">A_{H}</span>，<span class="math inline">A_{L}</span>は生産要素が用いられれば，学習によって高まっていく．
 <ul>
-<li>一種のlerning by doing．</li>
+<li>一種のlearning by doing．</li>
 </ul></li>
 </ul></li>
 <li>全ての市場は完全競争．</li>
@@ -3355,7 +3362,7 @@ A_{L} =  B_L L^{\epsilon - 1}
 </section>
 <section id="中間財企業の市場清算" class="level2">
 <h2 class="anchored" data-anchor-id="中間財企業の市場清算">中間財企業の市場清算</h2>
-<p>市場競争下では<span class="math inline">\pi_t^{H}=\pi_t^{L}=0</span>なので， <span class="math display">
+<p>市場競争下では<span class="math inline">\pi^{H}=\pi^{L}=0</span>なので， <span class="math display">
 \begin{aligned}
 p_H A_{H} &amp;= w_{H} \\
 p_L A_{L} &amp;= w_{L}
@@ -3377,13 +3384,19 @@ p_L A_{L} &amp;= w_{L}
 <p><span class="math display">
 \omega = \frac{w_{H}}{w_{L}} = B \frac{\gamma_H}{\gamma_L} \left( \frac{H}{L} \right)^{\epsilon - 2}
 </span></p>
-<p>ただし，<span class="math inline">B \equiv B_H/B_L</span></p>
+<p>ただし，<span class="math inline">B \equiv (B_H/B_L)^{\frac{\epsilon-1}{\epsilon}}</span></p>
 </section>
 <section id="代替の弾力性と賃金プレミアム" class="level2">
 <h2 class="anchored" data-anchor-id="代替の弾力性と賃金プレミアム">代替の弾力性と賃金プレミアム</h2>
 <p><span class="math display">
 \omega = B \frac{\gamma_H}{\gamma_L} \left( \frac{H}{L} \right)^{\epsilon - 2}
-</span> <span class="math inline">H</span>増加による反応は<span class="math inline">\epsilon</span>によって変わる： * <span class="math inline">\epsilon &lt; 2</span>なら，<span class="math inline">\omega</span>低下． * <span class="math inline">\epsilon = 2</span>なら，<span class="math inline">\omega</span>に変化はない． * <span class="math inline">\epsilon &gt; 2</span>なら，<span class="math inline">\omega</span>上昇．</p>
+</span></p>
+<p><span class="math inline">H</span>増加による反応は<span class="math inline">\epsilon</span>によって変わる：</p>
+<ul>
+<li><span class="math inline">\epsilon &lt; 2</span>なら，<span class="math inline">\omega</span>低下．</li>
+<li><span class="math inline">\epsilon = 2</span>なら，<span class="math inline">\omega</span>に変化はない．</li>
+<li><span class="math inline">\epsilon &gt; 2</span>なら，<span class="math inline">\omega</span>上昇．</li>
+</ul>
 </section>
 <section id="代替の大きさと技術進歩" class="level2">
 <h2 class="anchored" data-anchor-id="代替の大きさと技術進歩">代替の大きさと技術進歩</h2>
@@ -3392,7 +3405,11 @@ p_L A_{L} &amp;= w_{L}
 \omega = \underbrace{\frac{A_{H}}{A_{L}}}_{(+) 生産性効果} \underbrace{\frac{p_H}{p_L} }_{(-)価格効果}
 </span></p>
 <p><span class="math inline">A_H</span>の上昇が<span class="math inline">w_H=A_H p_H</span>を直接押し上げる一方，中間財の「代替しやすさ」が<span class="math inline">p_H</span>の下落を弱める．</p>
-<p>綱引きの結果は以下の反応に依存： * <span class="math inline">H</span>の（相対的な）上昇が<span class="math inline">A_H</span>をどれほど高めるか（関数形） * <span class="math inline">H</span>の（相対的な）上昇が<span class="math inline">p_H</span>の下落をどれほど弱めるか（代替の弾力性）</p>
+<p>綱引きの結果は以下の反応に依存：</p>
+<ul>
+<li><span class="math inline">H</span>の（相対的な）上昇が<span class="math inline">A_H</span>をどれほど高めるか（関数形）</li>
+<li><span class="math inline">H</span>の（相対的な）上昇が<span class="math inline">p_H</span>の下落をどれほど弱めるか（代替の弾力性）</li>
+</ul>
 </section>
 <section id="reference" class="level2">
 <h2 class="anchored" data-anchor-id="reference">Reference</h2>
